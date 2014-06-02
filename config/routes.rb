@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  scope "/:locale", locale: /en-US|pt-BR|pt-PT/ do
+  scope "/:locale", locale: AVAIABLE_LOCALES do
 
     get 'prayers' => 'prayers#index'
     namespace :prayers do
