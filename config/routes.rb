@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   scope '/:locale', locale: AVAIABLE_LOCALES do
 
+    devise_for :users
+
     get '/' => 'main_pages#index', as: :companion_hub
 
     get 'who_we_are' => 'main_pages#who_we_are'
