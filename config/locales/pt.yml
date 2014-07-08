@@ -5,7 +5,7 @@ pt:
 
   activerecord:
     models:
-      user: Equipista
+      user: Equipista - Portugal
     attributes:
       user:
         email: Email
