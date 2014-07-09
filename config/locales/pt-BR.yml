@@ -31,7 +31,7 @@ pt-BR:
         submit: Send me reset password instructions
     registrations:
       edit:
-        title: Edit
+        title: Edit %{resource}
         waiting_confirmation_for: Currently waiting confirmation for:
         password_hint: leave it blank if you don't want to change it
         current_password_hint: we need your current password to confirm your changes
@@ -46,6 +46,14 @@ pt-BR:
       new:
         title: Sign in
         submit: Sign in
+    shared:
+      links:
+        sign_in: Sign in
+        sign_up: Sigin up
+        forgot_password: Forgot your password?
+        confirmation_instructions: Didn't receive confirmation instructions?
+        unlock_instructions: Didn't receive unlock instructions?
+        sign_in_with_provider: Sign in with %{provider}
     unlocks:
       new:
         title: Resend unlock instructions

@@ -46,6 +46,14 @@ en:
       new:
         title: Sign in
         submit: Sign in
+    shared:
+      links:
+        sign_in: Sign in
+        sign_up: Sigin up
+        forgot_password: Forgot your password?
+        confirmation_instructions: Didn't receive confirmation instructions?
+        unlock_instructions: Didn't receive unlock instructions?
+        sign_in_with_provider: Sign in with %{provider}
     unlocks:
       new:
         title: Resend unlock instructions
