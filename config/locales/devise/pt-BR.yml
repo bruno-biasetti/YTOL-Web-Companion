@@ -2,8 +2,8 @@ pt-BR:
   devise:
     confirmations:
       new:
-        title: Resend confirmation instructions
-        submit: Resend confirmation instructions
+        title: Reenviar instruções de confirmação
+        submit: Reenviar instruções de confirmação
     mailer:
       confirmation_instructions:
         action: Confirmar minha conta
@@ -22,39 +22,39 @@ pt-BR:
         message: Sua conta foi bloqueada devido ao excessivo número de tentativas acesso inválidas.
     passwords:
       edit:
-        title: Change your password
-        new_password: New password
-        new_password_confirmation: Confirm your new password
-        submit: Change your password
+        title: Alterar sua senha
+        new_password: Nova senha
+        new_password_confirmation: Confirmação da nova senha
+        submit: Alterar sua senha
       new:
-        title: Forgot your password?
-        submit: Send me reset password instructions
+        title: Esqueceu sua senha?
+        submit: Enviar instruções para redefinição da senha
     registrations:
       edit:
-        title: Edit %{resource}
-        waiting_confirmation_for: 'Currently waiting confirmation for: %{email}'
-        password_hint: leave it blank if you don't want to change it
-        current_password_hint: we need your current password to confirm your changes
-        submit: Update
-        cancel_account: Cancel my account
-        cancel_account_confirmation: Are you sure?
-        back: Back
+        title: Editar %{resource}
+        waiting_confirmation_for: Aguardando a confirmação de %{email}
+        password_hint: deixe em branco caso não queira alterá-la
+        current_password_hint: precisamos da sua senha atual para confirmar suas mudanças
+        submit: Atualizar
+        cancel_account: Cancelar minha conta
+        cancel_account_confirmation: Você tem certeza?
+        back: Voltar
       new:
-        title: Sign up
-        submit: Sign up
+        title: Inscrever-se
+        submit: Inscrever-se
     sessions:
       new:
-        title: Sign in
-        submit: Sign in
+        title: Login
+        submit: Login
     shared:
       links:
-        sign_in: Sign in
-        sign_up: Sigin up
-        forgot_password: Forgot your password?
-        confirmation_instructions: Didn't receive confirmation instructions?
-        unlock_instructions: Didn't receive unlock instructions?
-        sign_in_with_provider: Sign in with %{provider}
+        sign_in: Inscrever-se
+        sign_up: Login
+        forgot_password: Esqueceu sua senha?
+        confirmation_instructions: Não recebeu instruções de confirmação?
+        unlock_instructions: Não recebeu instruções de desbloqueio?
+        sign_in_with_provider: Login com %{provider}
     unlocks:
       new:
-        title: Resend unlock instructions
-        submit: Resend unlock instructions
+        title: Renviar instruções de desbloqueio
+        submit: Renviar instruções de desbloqueio
