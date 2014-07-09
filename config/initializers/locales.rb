@@ -1,1 +1,1 @@
-AVAIABLE_LOCALES = /en|pt-BR|pt/
+AVAIABLE_LOCALES = /en|pt-BR/
