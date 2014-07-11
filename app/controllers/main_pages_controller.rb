@@ -4,7 +4,7 @@ class MainPagesController < ApplicationController
     
   end
 
-  def who_we_are
+  def the_movement
 
   end
 

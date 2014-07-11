@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
     get '/' => 'main_pages#index', as: :companion_hub
 
-    get 'who_we_are' => 'main_pages#who_we_are'
+    get 'the_movement' => 'main_pages#the_movement'
 
     get 'contact_us' => 'main_pages#contact_us'
 

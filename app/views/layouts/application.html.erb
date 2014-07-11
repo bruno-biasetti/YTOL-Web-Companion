@@ -10,12 +10,12 @@
 
 <div id="nav">
     <ul>
-        <li><%= t('the_movement') %></li>
+        <li><%= link_to t('the_movement'), the_movement_path %></li>
         <li>
             <span><%= t('meeting_guide') %></span>
             <ul>
                 <li>
-                    <span><%= t('the_prayers') %></span>
+                    <span><%= link_to t('the_prayers'), prayers_path %></span>
                     <ul>
                         <li><%= t('magnificat') %></li>
                         <li><%= t('holy_spirit') %></li>
@@ -30,8 +30,8 @@
                 <li><%= t('point_of_effort') %></li>
             </ul>
         </li>
-        <li><%= t('contact_us') %></li>
-        <li><%= t('oh_maria') %></li>
+        <li><%= link_to t('contact_us'), contact_us_path %></li>
+        <li><%= link_to t('oh_maria'), oh_maria_path %></li>
     </ul>
 </div>
 
