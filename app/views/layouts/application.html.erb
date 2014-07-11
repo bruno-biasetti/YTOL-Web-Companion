@@ -8,10 +8,39 @@
 </head>
 <body>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<div id="nav">
+    <ul>
+        <li><%= t('the_movement') %></li>
+        <li>
+            <span><%= t('meeting_guide') %></span>
+            <ul>
+                <li>
+                    <span><%= t('the_prayers') %></span>
+                    <ul>
+                        <li><%= t('magnificat') %></li>
+                        <li><%= t('holy_spirit') %></li>
+                        <li><%= t('hail_mary') %></li>
+                        <li><%= t('our_father') %></li>
+                        <li><%= t('time_out') %></li>
+                        <li><%= t('the_rosary') %></li>
+                    </ul>
+                </li>
+                <li><%= t('theme_reflections') %></li>
+                <li><%= t('sharing') %></li>
+                <li><%= t('point_of_effort') %></li>
+            </ul>
+        </li>
+        <li><%= t('contact_us') %></li>
+        <li><%= t('oh_maria') %></li>
+    </ul>
+</div>
 
-  <%= yield %>
+<div id="content">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+</div>
 
 </body>
 </html>
