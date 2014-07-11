@@ -13,6 +13,11 @@ en:
   point_of_effort: Point of Effort
   contact_us: Contact Us
   oh_maria: Oh Maria!
+  joyful_mysteries: Joyful Mysteries
+  sorrowful_mysteries: Sorrowful Mysteries
+  glorious_mysteries: Glorious Mysteries
+  mysteries_of_light: Mysteries of Light
+  how_to_pray: How to Pray
 
   activerecord:
     models:

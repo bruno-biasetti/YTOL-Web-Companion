@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get 'the_movement' => 'main_pages#the_movement'
 
     get 'meeting_guide' => 'meeting_guide#index'
-    scope '/meeting_guide' do
+    scope 'meeting_guide' do
 
       get 'prayers' => 'prayers#index'
       scope 'prayers' do
@@ -20,7 +20,14 @@ Rails.application.routes.draw do
         get 'time_out' => 'prayers#time_out'
 
         # Provavelmente ficara em outro controller
-        get 'the_rosary' => 'prayers#the_rosary'
+        get 'the_rosary' => 'rosary#index'
+        scope 'the_rosary' do
+          get 'joyful_mysteries' => 'rosary#joyful_mysteries'
+          get 'sorrowful_mysteries' => 'rosary#sorrowful_mysteries'
+          get 'glorious_mysteries' => 'rosary#glorious_mysteries'
+          get 'mysteries_of_light' => 'rosary#mysteries_of_light'
+          get 'how_to_pray' => 'rosary#how_to_pray'
+        end
       end
 
     end

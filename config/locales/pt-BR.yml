@@ -13,6 +13,11 @@ pt-BR:
   point_of_effort: Ponto de Esforço
   contact_us: Fale Conosco
   oh_maria: Oh Maria!
+  joyful_mysteries: Mistérios Gozosos
+  sorrowful_mysteries: Mistérios Dolorosos
+  glorious_mysteries: Mistérios Gloriosos
+  mysteries_of_light: Mistérios da Luz
+  how_to_pray: Como Rezar
 
   activerecord:
     models:

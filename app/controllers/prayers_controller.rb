@@ -18,7 +18,4 @@ class PrayersController < ApplicationController
   def time_out
   end
 
-  def the_rosary
-  end
-
 end
