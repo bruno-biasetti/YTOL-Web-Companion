@@ -12,17 +12,17 @@
     <ul>
         <li><%= link_to t('the_movement'), the_movement_path %></li>
         <li>
-            <span><%= t('meeting_guide') %></span>
+            <span><%= link_to t('meeting_guide'), meeting_guide_path %></span>
             <ul>
                 <li>
-                    <span><%= link_to t('the_prayers'), prayers_path %></span>
+                    <span><%= link_to t('prayers'), prayers_path %></span>
                     <ul>
-                        <li><%= t('magnificat') %></li>
-                        <li><%= t('holy_spirit') %></li>
-                        <li><%= t('hail_mary') %></li>
-                        <li><%= t('our_father') %></li>
-                        <li><%= t('time_out') %></li>
-                        <li><%= t('the_rosary') %></li>
+                        <li><%= link_to t('magnificat'), magnificat_path %></li>
+                        <li><%= link_to t('holy_spirit'), holy_spirit_path %></li>
+                        <li><%= link_to t('hail_mary'), hail_mary_path %></li>
+                        <li><%= link_to t('our_father'), our_father_path %></li>
+                        <li><%= link_to t('time_out'), time_out_path %></li>
+                        <li><%= link_to t('the_rosary'), the_rosary_path %></li>
                     </ul>
                 </li>
                 <li><%= t('theme_reflections') %></li>

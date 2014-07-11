@@ -1,7 +1,7 @@
 pt-BR:
   the_movement: O Movimento
   meeting_guide: Guia de Reunião
-  the_prayers: Orações
+  prayers: Orações
   magnificat: Magnificat
   holy_spirit: Espírito Santo
   hail_mary: Ave Maria
@@ -13,12 +13,6 @@ pt-BR:
   point_of_effort: Ponto de Esforço
   contact_us: Fale Conosco
   oh_maria: Oh Maria!
-
-  prayers:
-    index:
-      title: Orações
-    hail_mary:
-      title: Ave Maria
 
   activerecord:
     models:
