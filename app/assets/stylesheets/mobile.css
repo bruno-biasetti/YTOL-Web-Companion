@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* CSS Document */
+/*************************************/
+/*** MOBILE **************************/
+/*************************************/
+/*************************************/
+/*** GENERAL CONFIGS AND VARIABLES ***/
+/*************************************/
+/*** CONFIGS ***/
+.clearfix {
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  clear: both !important;
+}
+@media screen and (max-width: 60.5em) {
+  /*** CONTAINER ***/
+  div#container {
+    width: 100%;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    padding: 2em 0;
+  }
+  /*** LANDING ***/
+  div#landing-wrapper {
+    width: 95% !important;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+    padding: 0;
+  }
+  div#landing-wrapper div#logo-img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    zoom: 0.7;
+  }
+  div#landing-wrapper div#logo-img img {
+    width: 384px !important;
+    display: block;
+    margin: 0 auto !important;
+  }
+  div#landing-wrapper div#logo-type {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    zoom: 0.7;
+  }
+  div#landing-wrapper div#logo-type img {
+    width: 328px !important;
+    display: block;
+    margin: 0 auto !important;
+  }
+  div#landing-wrapper div#nav-enter {
+    width: 100%;
+    height: auto;
+    margin: 1em auto;
+  }
+  div#landing-wrapper div#nav-enter ul li a {
+    width: 6em;
+  }
+  /*************************************/
+  /*** APPLICATION *********************/
+  /*************************************/
+  /*** ACTION BAR ***/
+  div#action-bar {
+    width: 100%;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+  }
+  div#action-bar ul {
+    width: 100%;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  div#action-bar ul li#icon-title {
+    overflow: hidden;
+    width: 70%;
+    margin-left: 1%;
+  }
+  div#action-bar ul li#icon-title h2 {
+    font-size: 1.7em;
+    font-weight: 400;
+  }
+}

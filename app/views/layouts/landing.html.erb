@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Companion</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<meta name="description" content="YTOL Companion App - Youth Teams of Our Lady: Companion App">
+	<meta name="keywords" content="YTOL Companion, ytol, companion, Youth Teams of Our Lady, youth, teams, team, our, lady, mary, app, webapp, web">
+	<meta name="robots" content="index,follow">
+	<meta name="googlebot" content="index,follow">
+	
+    <title>YTOL Companion</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+	<link href="<%= image_path("app-icon/iPhone.png") %>" rel="apple-touch-icon" />
+	<link href="<%= image_path("app-icon/iPad.png") %>" rel="apple-touch-icon" sizes="76x76" />
+	<link href="<%= image_path("app-icon/iPhone@2x.png") %>" rel="apple-touch-icon" sizes="120x120" />
+	<link href="<%= image_path("app-icon/iPad@2x.png") %>" rel="apple-touch-icon" sizes="152x152" />
+	
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<div id="container">
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 
-<%= yield %>
+	<%= yield %>
+</div>
 
 </body>
 </html>

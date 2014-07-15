@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Companion</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<meta name="description" content="YTOL Companion App - Youth Teams of Our Lady: Companion App">
+	<meta name="keywords" content="YTOL Companion, ytol, companion, Youth Teams of Our Lady, youth, teams, team, our, lady, mary, app, webapp, web">
+	<meta name="robots" content="index,follow">
+	<meta name="googlebot" content="index,follow">
+	
+  	<title>YTOL Companion</title>
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>	
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+	
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+	<link href="<%= image_path("app-icon/iPhone.png") %>" rel="apple-touch-icon" />
+	<link href="<%= image_path("app-icon/iPad.png") %>" rel="apple-touch-icon" sizes="76x76" />
+	<link href="<%= image_path("app-icon/iPhone@2x.png") %>" rel="apple-touch-icon" sizes="120x120" />
+	<link href="<%= image_path("app-icon/iPad@2x.png") %>" rel="apple-touch-icon" sizes="152x152" />
+	
 </head>
 <body>
 
-<div id="nav">
-    <ul>
+<div id="action-bar">
+	<ul>
+		<li id="call-nav-drawer"><a href="#" title="Access Navigation Drawer (Side Nav)">Access Navigation Drawer (Side Nav)</a></li>
+		<li id="icon-title">
+			<img src="<%= image_path("icons/icon-ytol-app.png") %>" width="37" height="39" alt="YTOL App" />
+			<h2><strong>YTOL</strong> APP</h2>
+		</li>
+		<li id="call-action-nav"><a href="#" title="Action Bar Menu">Action Bar Menu</a></li>
+	</ul>
+</div>
+
+<div class="clearfix"></div>
+
+<div id="nav-drawer">
+    <ul id="nav-drawer-container">
         <li><%= link_to t('the_movement'), the_movement_path %></li>
         <li>
             <span><%= link_to t('meeting_guide'), meeting_guide_path %></span>
-            <ul>
+            <ul class="first-level closed">
                 <li>
                     <span><%= link_to t('prayers'), prayers_path %></span>
-                    <ul>
+                    <ul class="second-level closed">
                         <li><%= link_to t('magnificat'), magnificat_path %></li>
                         <li><%= link_to t('holy_spirit'), holy_spirit_path %></li>
                         <li><%= link_to t('hail_mary'), hail_mary_path %></li>
@@ -33,13 +63,19 @@
         <li><%= link_to t('contact_us'), contact_us_path %></li>
         <li><%= link_to t('oh_maria'), oh_maria_path %></li>
     </ul>
+
+	<div id="nav-layer"></div>
 </div>
 
-<div id="content">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+<div id="container" style="display: block">
+	<div id="container-wrapper">
+		
+		<p class="notice"><%= notice %></p>
+	    <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+	    <%= yield %>
+		
+	</div>
 </div>
 
 </body>

@@ -1,2 +1,22 @@
-<%= link_to 'Brasil', new_user_session_path(locale: :"pt-BR") %>
-<%= link_to 'US', companion_hub_path(locale: :"en") %>
+<div id="landing-wrapper">
+	
+	<div id="logo-img">
+		<%= image_tag("logo/logo-white.png", size: "384x345", alt: "YTOL Companion App Logo") %>
+	</div>
+
+	<div id="logo-type">
+		<%= image_tag("logo/logo-type.png", size: "328x159", alt: "YTOL Companion App Logo Type") %>
+	</div>
+
+	<div id="nav-enter">
+		<ul>
+			<li class="flag br-flag">
+				<%= link_to 'Entrar »', new_user_session_path(locale: :"pt-BR") %>
+			</li>
+			<li class="flag us-flag">
+				<%= link_to 'Enter »', companion_hub_path(locale: :"en") %>
+			</li>
+		</ul>
+	</div>
+	
+</div>
