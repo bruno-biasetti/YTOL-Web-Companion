@@ -1,0 +1,26 @@
+<%
+	current_uri = request.env['PATH_INFO']
+	if current_uri.index("sign") != nil
+%>
+<div id="action-bar">
+	<ul>
+		<li id="icon-title">
+			<img src="<%= image_path("icons/icon-ytol-app.png") %>" width="37" height="39" alt="YTOL App" />
+			<h2><strong>YTOL</strong> APP</h2>
+		</li>
+	</ul>
+</div>
+<% else %>
+<div id="action-bar">
+	<ul>
+		<li id="call-nav-drawer"><a href="#" title="Access Navigation Drawer (Side Nav)">Access Navigation Drawer (Side Nav)</a></li>
+		<li id="icon-title">
+			<img src="<%= image_path("icons/icon-ytol-app.png") %>" width="37" height="39" alt="YTOL App" />
+			<h2><strong>YTOL</strong> APP</h2>
+		</li>
+		<li id="call-action-nav"><a href="#" title="Action Bar Menu">Action Bar Menu</a></li>
+	</ul>
+</div>
+<% end %>
+
+<div class="clearfix"></div>

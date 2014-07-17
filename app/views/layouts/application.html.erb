@@ -5,6 +5,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	
 	<meta name="description" content="YTOL Companion App - Youth Teams of Our Lady: Companion App">
 	<meta name="keywords" content="YTOL Companion, ytol, companion, Youth Teams of Our Lady, youth, teams, team, our, lady, mary, app, webapp, web">
 	<meta name="robots" content="index,follow">
@@ -25,28 +28,21 @@
 </head>
 <body>
 
-<div id="action-bar">
-	<ul>
-		<li id="call-nav-drawer"><a href="#" title="Access Navigation Drawer (Side Nav)">Access Navigation Drawer (Side Nav)</a></li>
-		<li id="icon-title">
-			<img src="<%= image_path("icons/icon-ytol-app.png") %>" width="37" height="39" alt="YTOL App" />
-			<h2><strong>YTOL</strong> APP</h2>
-		</li>
-		<li id="call-action-nav"><a href="#" title="Action Bar Menu">Action Bar Menu</a></li>
-	</ul>
-</div>
-
-<div class="clearfix"></div>
+<%= render 'layouts/action_bar' %>
 
 <div id="nav-drawer">
     <ul id="nav-drawer-container">
         <li><%= link_to t('the_movement'), the_movement_path %></li>
         <li>
             <span><%= link_to t('meeting_guide'), meeting_guide_path %></span>
-            <ul class="first-level closed">
+			<a href="#" class="arrow-ctrl arrow-down"></a>
+			
+            <ul class="sub-level first-level closed">
                 <li>
                     <span><%= link_to t('prayers'), prayers_path %></span>
-                    <ul class="second-level closed">
+					<a href="#" class="arrow-ctrl arrow-down"></a>
+
+                    <ul class="sub-level second-level closed">
                         <li><%= link_to t('magnificat'), magnificat_path %></li>
                         <li><%= link_to t('holy_spirit'), holy_spirit_path %></li>
                         <li><%= link_to t('hail_mary'), hail_mary_path %></li>
@@ -67,13 +63,16 @@
 	<div id="nav-layer"></div>
 </div>
 
-<div id="container" style="display: block">
+<div id="container" class="content-bg">
 	<div id="container-wrapper">
 		
 		<p class="notice"><%= notice %></p>
 	    <p class="alert"><%= alert %></p>
-
+		
 	    <%= yield %>
+		
+		<%=  %><br />
+		<%=  %>
 		
 	</div>
 </div>

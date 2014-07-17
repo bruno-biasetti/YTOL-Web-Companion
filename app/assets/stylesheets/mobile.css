@@ -17,6 +17,19 @@
 }
 @media screen and (max-width: 60.5em) {
   /*** CONTAINER ***/
+  html,
+  body {
+    height: 100%;
+  }
+  #container,
+  .content-bg {
+    height: auto;
+  }
+  .notice,
+  .alert {
+    width: 90%;
+    left: 5%;
+  }
   div#container {
     width: 100%;
     height: auto;
@@ -26,9 +39,12 @@
     padding: 0;
     padding: 2em 0;
   }
+  /*************************************/
+  /*** APPLICATION *********************/
+  /*************************************/
   /*** LANDING ***/
   div#landing-wrapper {
-    width: 95% !important;
+    width: 90% !important;
     height: auto;
     display: block;
     clear: both;
@@ -65,9 +81,6 @@
   div#landing-wrapper div#nav-enter ul li a {
     width: 6em;
   }
-  /*************************************/
-  /*** APPLICATION *********************/
-  /*************************************/
   /*** ACTION BAR ***/
   div#action-bar {
     width: 100%;
@@ -94,5 +107,85 @@
   div#action-bar ul li#icon-title h2 {
     font-size: 1.7em;
     font-weight: 400;
+  }
+  /*** NAVIGATION DRAWER ***/
+  div#nav-drawer {
+    width: 100%;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+  }
+  div#nav-drawer ul#nav-drawer-container {
+    width: 75%;
+    overflow: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  /*** CONTENT CONTAINER ***/
+  div#container-wrapper {
+    width: 90% !important;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+    padding: 0;
+    padding: 2em 0 0 0;
+  }
+  /*** SIGN IN / SIGN UP ***/
+  div#register-header {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 8em;
+    border-bottom: 1px solid #cccaca;
+    clear: both;
+  }
+  div#register-header div#register-header-wrapper {
+    width: 16.4em;
+    margin: 0 auto;
+  }
+  div#register-header div#register-header-wrapper div#register-sign-in,
+  div#register-header div#register-header-wrapper div#register-sign-up {
+    padding: 0.5em 1.5em;
+  }
+  div#register-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    padding: 0.5em 0 0 0;
+  }
+  div#register-container div#devise-shared-links a {
+    width: 100%;
+    padding: 0.8em 0;
+  }
+  /*** INPUTS ***/
+  div.input input.string,
+  div.input input.password {
+    border-radius: 0px !important;
+  }
+  div.input input:focus {
+    border-left: 2px solid #33b5e5 !important;
+    border-right: 2px solid #33b5e5 !important;
+    border-bottom: 2px solid #33b5e5 !important;
+  }
+  div.form-actions {
+    padding: 1em 0;
+    margin: 0 0 1em 0;
+  }
+  div.form-actions input.action-send {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    border: none !important;
+    text-indent: -3000px;
+    background: transparent url('sprite-map/spirte-round-icons.png') left -130px no-repeat scroll;
   }
 }
