@@ -4,7 +4,7 @@ class ThemeReflectionsController < ApplicationController
 
   # GET /theme_reflections
   def index
-    @theme_reflections = ThemeReflection.all
+    @theme_reflections = current_user.theme_reflections
   end
 
   # GET /theme_reflections/1
@@ -23,6 +23,7 @@ class ThemeReflectionsController < ApplicationController
   # POST /theme_reflections
   def create
     @theme_reflection = ThemeReflection.new(theme_reflection_params)
+    @theme_reflection.user = current_user
 
     if @theme_reflection.save
       flash[:notice] = 'Theme reflection was successfully created.'
