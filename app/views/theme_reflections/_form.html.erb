@@ -1,0 +1,21 @@
+<%= form_for(@theme_reflection, url: custom_url) do |f| %>
+  <% if @theme_reflection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@theme_reflection.errors.count, "error") %> prohibited this theme_reflection from being saved:</h2>
+
+      <ul>
+      <% @theme_reflection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :question %><br>
+    <%= f.text_area :question %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

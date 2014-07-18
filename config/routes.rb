@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     get 'meeting_guide' => 'meeting_guide#index'
     scope 'meeting_guide' do
 
+      resources :theme_reflections
+
       get 'prayers' => 'prayers#index'
       scope 'prayers' do
         get 'magnificat' => 'prayers#magnificat'
