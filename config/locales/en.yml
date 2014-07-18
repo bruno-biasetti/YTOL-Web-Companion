@@ -48,6 +48,5 @@ en:
       messages:
         taken: "it's already in use"
         record_invalid: "The validation failed: %{errors}"
-        <<: *errors_messages
       full_messages:
         format: "%{attribute} %{message}"

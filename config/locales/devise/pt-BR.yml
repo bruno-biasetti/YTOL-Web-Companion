@@ -12,7 +12,7 @@ pt-BR:
     confirmations:
       send_instructions: 'Você receberá um e-mail com instruções de como confirmar a sua conta em alguns minutos.'
       send_paranoid_instructions: 'Se o seu e-mail existir em nossa base de dados você receberá um e-mail com instruções de como confirmar a sua conta em alguns minutos.'
-      confirmed: 'Sua conta foi confirmada com sucesso. Você está logado.'
+      confirmed: 'Sua conta foi confirmada com sucesso. Realize o login para acessar o aplicação.'
       new:
         title: Reenviar instruções de confirmação
         submit: Reenviar instruções de confirmação
