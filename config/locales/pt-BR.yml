@@ -33,6 +33,7 @@ pt-BR:
     models:
       user: Equipista
       theme_reflection: Reflexão do Tema
+      sharing: Partilha
     attributes:
       user:
         email: Email
@@ -43,6 +44,12 @@ pt-BR:
       theme_reflection:
         question: "O que Deus está tentando me dizer através do tema deste mês?"
         created_at: Data da Reflexão
+      sharing:
+        spiritual_life: "Como está a minha vida espiritual?"
+        god_relationship: "Como está meu relacionamento com Deus e a Igreja?"
+        family_relationship: "Como está meu relacionamento com minha família?"
+        testimony_to_society: "Qual tem sido minha postura como Cristão perante a sociedade?"
+        created_at: Data da Partilha
     errors:
       template:
         header:

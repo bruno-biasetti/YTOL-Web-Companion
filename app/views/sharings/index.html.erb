@@ -7,6 +7,7 @@
       <th>God relationship</th>
       <th>Family relationship</th>
       <th>Testimony to society</th>
+      <th>Created at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +19,10 @@
         <td><%= sharing.god_relationship %></td>
         <td><%= sharing.family_relationship %></td>
         <td><%= sharing.testimony_to_society %></td>
-        <td><%= link_to 'Show', sharing %></td>
-        <td><%= link_to 'Edit', edit_sharing_path(sharing) %></td>
-        <td><%= link_to 'Destroy', sharing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= l sharing.created_at, format: :date_only %></td>
+        <td><%= link_to 'Show', sharing_path(sharing, locale: locale) %></td>
+        <td><%= link_to 'Edit', edit_sharing_path(sharing, locale: locale) %></td>
+        <td><%= link_to 'Destroy', sharing_path(sharing, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

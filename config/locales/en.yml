@@ -33,6 +33,7 @@ en:
     models:
       user: YTOLer
       theme_reflection: Theme Reflection
+      sharing: Sharing
     attributes:
       user:
         email: Email
@@ -43,6 +44,12 @@ en:
       theme_reflection:
         question: "What is God trying to tell me through this month's theme?"
         created_at: Reflection Date
+      sharing:
+        spiritual_life: "How is my spiritual life?"
+        god_relationship: "How is my relationship with God and the Church?"
+        family_relationship: "How is my relationship with my family?"
+        testimony_to_society: "What has been my stance as a Christian in society?"
+        created_at: Sharing date
     errors:
       template:
         header:
