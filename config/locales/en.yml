@@ -29,3 +29,7 @@ en:
         remember_me: Remember me
         password_confirmation: Password confirmation
         current_password: Current password
+
+  time:
+    formats:
+      default: "%m/%d/%Y"

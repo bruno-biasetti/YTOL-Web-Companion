@@ -29,3 +29,7 @@ pt-BR:
         remember_me: Lembre-se de mim
         password_confirmation: Confirmação da senha
         current_password: Senha atual
+
+  time:
+    formats:
+      default: "%d/%m/%Y"
