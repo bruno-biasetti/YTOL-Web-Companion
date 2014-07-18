@@ -3,13 +3,11 @@ class ThemeReflectionsController < ApplicationController
   before_action :authenticate_user!
 
   # GET /theme_reflections
-  # GET /theme_reflections.json
   def index
     @theme_reflections = ThemeReflection.all
   end
 
   # GET /theme_reflections/1
-  # GET /theme_reflections/1.json
   def show
   end
 
@@ -23,7 +21,6 @@ class ThemeReflectionsController < ApplicationController
   end
 
   # POST /theme_reflections
-  # POST /theme_reflections.json
   def create
     @theme_reflection = ThemeReflection.new(theme_reflection_params)
 
@@ -36,7 +33,6 @@ class ThemeReflectionsController < ApplicationController
   end
 
   # PATCH/PUT /theme_reflections/1
-  # PATCH/PUT /theme_reflections/1.json
   def update
     if @theme_reflection.update(theme_reflection_params)
       flash[:notice] = 'Theme reflection was successfully updated.'
@@ -47,7 +43,6 @@ class ThemeReflectionsController < ApplicationController
   end
 
   # DELETE /theme_reflections/1
-  # DELETE /theme_reflections/1.json
   def destroy
     @theme_reflection.destroy
 
