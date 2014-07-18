@@ -41,7 +41,7 @@ pt-BR:
         password_confirmation: Confirmação da senha
         current_password: Senha atual
       theme_reflection:
-        question: 'O que Deus está tentando me dizer através do tema deste mês?'
+        question: "O que Deus está tentando me dizer através do tema deste mês?"
         created_at: Data da Reflexão
     errors:
       template:

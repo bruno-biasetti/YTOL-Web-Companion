@@ -41,7 +41,7 @@ en:
         password_confirmation: Password confirmation
         current_password: Current password
       theme_reflection:
-        question: 'What is God trying to tell me through this month's theme?'
+        question: "What is God trying to tell me through this month's theme?"
         created_at: Reflection Date
     errors:
       template:
