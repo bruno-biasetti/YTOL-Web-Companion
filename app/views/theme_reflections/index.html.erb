@@ -12,7 +12,7 @@
     <% @theme_reflections.each do |theme_reflection| %>
       <tr>
         <td><%= theme_reflection.question %></td>
-        <td><%= l theme_reflection.created_at %></td>
+        <td><%= l theme_reflection.created_at, format: :short %></td>
         <td><%= link_to 'Show', theme_reflection_path(theme_reflection, locale: locale) %></td>
         <td><%= link_to 'Edit', edit_theme_reflection_path(theme_reflection, locale: locale) %></td>
         <td><%= link_to 'Destroy', theme_reflection_path(theme_reflection, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
