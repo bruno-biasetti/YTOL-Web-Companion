@@ -6,7 +6,7 @@
       <th>Title</th>
       <th>Description</th>
       <th>Due date</th>
-      <th>User</th>
+      <th>Created at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,11 +16,11 @@
       <tr>
         <td><%= point_of_effort.title %></td>
         <td><%= point_of_effort.description %></td>
-        <td><%= point_of_effort.due_date %></td>
-        <td><%= point_of_effort.user_id %></td>
-        <td><%= link_to 'Show', point_of_effort %></td>
-        <td><%= link_to 'Edit', edit_point_of_effort_path(point_of_effort) %></td>
-        <td><%= link_to 'Destroy', point_of_effort, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= l point_of_effort.due_date %></td>
+        <td><%= l point_of_effort.created_at, format: :date_only %></td>
+        <td><%= link_to 'Show', point_of_effort_path(point_of_effort, locale: locale) %></td>
+        <td><%= link_to 'Edit', edit_point_of_effort_path(point_of_effort, locale: locale) %></td>
+        <td><%= link_to 'Destroy', point_of_effort_path(point_of_effort, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

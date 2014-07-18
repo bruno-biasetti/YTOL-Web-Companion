@@ -2,13 +2,11 @@ class PointOfEffortsController < ApplicationController
   before_action :set_point_of_effort, only: [:show, :edit, :update, :destroy]
 
   # GET /point_of_efforts
-  # GET /point_of_efforts.json
   def index
-    @point_of_efforts = PointOfEffort.all
+    @point_of_efforts = current_user.point_of_efforts
   end
 
   # GET /point_of_efforts/1
-  # GET /point_of_efforts/1.json
   def show
   end
 
@@ -22,43 +20,33 @@ class PointOfEffortsController < ApplicationController
   end
 
   # POST /point_of_efforts
-  # POST /point_of_efforts.json
   def create
     @point_of_effort = PointOfEffort.new(point_of_effort_params)
+    @point_of_effort.user = current_user
 
-    respond_to do |format|
-      if @point_of_effort.save
-        format.html { redirect_to @point_of_effort, notice: 'Point of effort was successfully created.' }
-        format.json { render :show, status: :created, location: @point_of_effort }
-      else
-        format.html { render :new }
-        format.json { render json: @point_of_effort.errors, status: :unprocessable_entity }
-      end
+    if @point_of_effort.save
+      flash[:notice] = 'Point of Effort was successfully created.'
+      redirect_to point_of_efforts_path(locale: locale)
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /point_of_efforts/1
-  # PATCH/PUT /point_of_efforts/1.json
   def update
-    respond_to do |format|
-      if @point_of_effort.update(point_of_effort_params)
-        format.html { redirect_to @point_of_effort, notice: 'Point of effort was successfully updated.' }
-        format.json { render :show, status: :ok, location: @point_of_effort }
-      else
-        format.html { render :edit }
-        format.json { render json: @point_of_effort.errors, status: :unprocessable_entity }
-      end
+    if @point_of_effort.update(point_of_effort_params)
+      flash[:notice] = 'Point of Effort was successfully updated.'
+      redirect_to point_of_efforts_path(locale: locale)
+    else
+      render :edit
     end
   end
 
   # DELETE /point_of_efforts/1
-  # DELETE /point_of_efforts/1.json
   def destroy
     @point_of_effort.destroy
-    respond_to do |format|
-      format.html { redirect_to point_of_efforts_url, notice: 'Point of effort was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+
+    redirect_to point_of_efforts_url, notice: 'Point of Effort was successfully destroyed.'
   end
 
   private

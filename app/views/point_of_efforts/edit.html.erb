@@ -1,6 +1,6 @@
 <h1>Editing point_of_effort</h1>
 
-<%= render 'form' %>
+<%= render 'form', custom_url: point_of_effort_path(@point_of_effort, locale: locale) %>
 
-<%= link_to 'Show', @point_of_effort %> |
-<%= link_to 'Back', point_of_efforts_path %>
+<%= link_to 'Show', point_of_effort_path(@point_of_effort, locale: locale) %> |
+<%= link_to 'Back', point_of_efforts_path(locale: locale) %>

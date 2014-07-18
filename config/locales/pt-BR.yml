@@ -52,9 +52,9 @@ pt-BR:
         testimony_to_society: "Qual tem sido minha postura como Cristão perante a sociedade?"
         created_at: Data da Partilha
       point_of_effort:
-        title: What is your new point of effort?
-        description: Description
-        due_date: Goal achievement
+        title: Qual é seu novo ponto de esforço?
+        description: Descrição
+        due_date: Meta de realização
     errors:
       template:
         header:

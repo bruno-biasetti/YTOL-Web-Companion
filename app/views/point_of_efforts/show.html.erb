@@ -20,5 +20,5 @@
   <%= @point_of_effort.user_id %>
 </p>
 
-<%= link_to 'Edit', edit_point_of_effort_path(@point_of_effort) %> |
-<%= link_to 'Back', point_of_efforts_path %>
+<%= link_to 'Edit', edit_point_of_effort_path(@point_of_effort, locale: locale) %> |
+<%= link_to 'Back', point_of_efforts_path(locale: locale) %>

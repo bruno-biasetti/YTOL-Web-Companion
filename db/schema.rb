@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140718224723) do
+ActiveRecord::Schema.define(version: 20140718233048) do
+
+  create_table "point_of_efforts", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.date     "due_date"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sharings", force: true do |t|
     t.text     "spiritual_life"
