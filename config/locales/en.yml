@@ -39,3 +39,15 @@ en:
         remember_me: Remember me
         password_confirmation: Password confirmation
         current_password: Current password
+    errors:
+      template:
+        header:
+          one: "Can't save %{model}: 1 error"
+          other: "Can't save %{model}: %{count} erros."
+        body: "Please, verify the following fields:"
+      messages:
+        taken: "it's already in use"
+        record_invalid: "The validation failed: %{errors}"
+        <<: *errors_messages
+      full_messages:
+        format: "%{attribute} %{message}"
