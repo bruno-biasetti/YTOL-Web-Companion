@@ -19,6 +19,16 @@ pt-BR:
   mysteries_of_light: Mistérios da Luz
   how_to_pray: Como Rezar
 
+  errors:
+    messages:
+      expired: "expirado, por favot tente um(a) novo(a)"
+      not_found: "não encontrado"
+      already_confirmed: "já foi confirmado, por favor tente fazer o login"
+      not_locked: "não foi bloqueado"
+      not_saved:
+        one: "1 erro impediu este(a) %{resource} de ser armazenado:"
+        other: "%{count} erros impediram este(a) %{resource} de ser armazenado:"
+
   activerecord:
     models:
       user: Equipista

@@ -19,6 +19,16 @@ en:
   mysteries_of_light: Mysteries of Light
   how_to_pray: How to Pray
 
+  errors:
+    messages:
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      already_confirmed: "was already confirmed, please try signing in"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+
   activerecord:
     models:
       user: YTOLer

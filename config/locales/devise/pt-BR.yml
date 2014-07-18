@@ -1,26 +1,46 @@
 pt-BR:
   devise:
+    failure:
+      already_authenticated: 'Você já está logado.'
+      unauthenticated: 'Você precisa fazer o seu login ou se cadastrar para continuar.'
+      unconfirmed: 'Você precisar confirmar a sua conta para continuar.'
+      locked: 'Sua conta está bloqueada.'
+      invalid: 'E-mail ou senha inválidos.'
+      invalid_token: 'Token de autenticação inválido.'
+      timeout: 'Sua sessão expirou. Por favor, faça o login novamente para continuar'
+      inactive: 'Sua conta ainda não foi ativada.'
     confirmations:
+      send_instructions: 'Você receberá um e-mail com instruções de como confirmar a sua conta em alguns minutos.'
+      send_paranoid_instructions: 'Se o seu e-mail existir em nossa base de dados você receberá um e-mail com instruções de como confirmar a sua conta em alguns minutos.'
+      confirmed: 'Sua conta foi confirmada com sucesso. Você está logado.'
       new:
         title: Reenviar instruções de confirmação
         submit: Reenviar instruções de confirmação
     mailer:
       confirmation_instructions:
+        subject: 'Instruções de confirmação'
         action: Confirmar minha conta
         greeting: Bem-vindo %{recipient}!
         instruction: 'Você pode confirmar sua conta através do link abaixo:'
       reset_password_instructions:
+        subject: 'Instruções para reset de senha'
         action: Redefinir minha senha
         greeting: Olá %{recipient}!
         instruction: Alguém fez o pedido para redefinir sua senha, e você pode fazer isso clicando no link abaixo.
         instruction_2: Se você não fez este pedido, por favor ignore este e-mail.
         instruction_3: Sua senha não será alterada até que você acesse o link abaixo e crie uma nova.
       unlock_instructions:
+        subject: 'Instruções para desbloqueio de conta'
         action: Desbloquear minha conta
         greeting: Olá %{recipient}!
         instruction: 'Clique no link abaixo para desbloquear sua conta:'
         message: Sua conta foi bloqueada devido ao excessivo número de tentativas acesso inválidas.
     passwords:
+      send_instructions: 'Você receberá um e-mail com instruções de como fazer o reset de sua senha em alguns minutos.'
+      updated: 'Sua senha foi atualizada com sucesso. Você está logado.'
+      updated_not_active: 'Sua senha foi atualizada com sucesso.'
+      send_paranoid_instructions: "Se sua conta de e-mail existir em nossa base de dados, você receberá um link para recuperação de senha em seu e-mail em alguns minutos."
+      no_token: "Você não pode acessar está página sem ter vindo de um e-mail para reset de senha. Se você veio de um, por favor tenha certeza de que está utilizando a URL correta."
       edit:
         title: Alterar sua senha
         new_password: Nova senha
@@ -30,6 +50,13 @@ pt-BR:
         title: Esqueceu sua senha?
         submit: Enviar instruções para redefinição da senha
     registrations:
+      signed_up: 'Bem Vindo(a)! Seu cadastro foi realizado com sucesso.'
+      signed_up_but_unconfirmed: 'Uma mensagem contendo um link de confirmação foi enviada para seu e-mail. Por favor utilize este link para ativar a sua conta.'
+      signed_up_but_inactive: 'Seu cadastro foi realizado com sucesso. Porém, você ainda não está logado pois sua conta ainda não confirmada.'
+      signed_up_but_locked: 'Seu cadastro foi realizado com sucesso. Porém, você ainda não está logado pois sua conta está bloqueada.'
+      updated: 'Sua conta foi atualizada com sucesso.'
+      update_needs_confirmation: "Sua conta foi atualizada com sucesso, mas precisamos verificar seu endereço de e-mail. Por favor cheque seu e-mail e clique no link de confirmação para confirmarmos seu novo endereço de e-mail."
+      destroyed: 'Hasta la vista, baby! Sua conta foi cancelada com sucesso. Esperamos ver você novamente algum dia!'
       edit:
         title: Editar %{resource}
         waiting_confirmation_for: Aguardando a confirmação de %{email}
@@ -43,6 +70,8 @@ pt-BR:
         title: Inscrever-se
         submit: Inscrever-se
     sessions:
+      signed_in: 'Login realizado com sucesso.'
+      signed_out: 'Logout realizado com sucesso.'
       new:
         title: Login
         submit: Login
@@ -55,6 +84,9 @@ pt-BR:
         unlock_instructions: Não recebeu instruções de desbloqueio?
         sign_in_with_provider: Login com %{provider}
     unlocks:
+      send_instructions: 'Você receberá um e-mail com instruções de como desbloquear a sua conta em alguns minutos.'
+      unlocked: 'Sua conta foi desbloqueada com sucesso. Por favor, faça seu login para continuar.'
+      send_paranoid_instructions: 'Se sua conta existir, enviaremos um e-mail com instruções de como desbloquear a sua conta em alguns minutos.'
       new:
         title: Renviar instruções de desbloqueio
         submit: Renviar instruções de desbloqueio
