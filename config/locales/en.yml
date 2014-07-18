@@ -50,3 +50,7 @@ en:
         record_invalid: "The validation failed: %{errors}"
       full_messages:
         format: "%{attribute} %{message}"
+
+  time:
+    formats:
+      date_only: "%m/%d/%Y"
