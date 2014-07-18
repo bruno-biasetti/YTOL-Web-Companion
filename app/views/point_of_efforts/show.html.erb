@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @point_of_effort.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @point_of_effort.description %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @point_of_effort.due_date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @point_of_effort.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_point_of_effort_path(@point_of_effort) %> |
+<%= link_to 'Back', point_of_efforts_path %>

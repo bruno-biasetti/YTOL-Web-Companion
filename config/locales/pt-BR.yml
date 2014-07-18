@@ -34,6 +34,7 @@ pt-BR:
       user: Equipista
       theme_reflection: Reflexão do Tema
       sharing: Partilha
+      point_of_effort: Ponto de Esforço
     attributes:
       user:
         email: Email
@@ -50,6 +51,10 @@ pt-BR:
         family_relationship: "Como está meu relacionamento com minha família?"
         testimony_to_society: "Qual tem sido minha postura como Cristão perante a sociedade?"
         created_at: Data da Partilha
+      point_of_effort:
+        title: What is your new point of effort?
+        description: Description
+        due_date: Goal achievement
     errors:
       template:
         header:

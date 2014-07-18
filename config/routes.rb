@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
       resources :sharings
 
+      resources :point_of_efforts
+
       get 'prayers' => 'prayers#index'
       scope 'prayers' do
         get 'magnificat' => 'prayers#magnificat'

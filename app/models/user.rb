@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :theme_reflections
   has_many :sharings
+  has_many :point_of_efforts
 end
