@@ -34,6 +34,8 @@ gem 'devise-i18n'
 
 gem 'simple_form'
 
+gem 'aws-ses', '~> 0.5.0', require: 'aws/ses'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
