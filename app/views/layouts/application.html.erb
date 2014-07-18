@@ -32,6 +32,9 @@
 
 <div id="nav-drawer">
     <ul id="nav-drawer-container">
+        <% if !user_signed_in? %>
+            <li><%= link_to 'Entrar »', new_user_session_path %></li>
+        <% end %>
         <li><%= link_to t('the_movement'), the_movement_path %></li>
         <li>
             <span><%= link_to t('meeting_guide'), meeting_guide_path %></span>
@@ -58,6 +61,9 @@
         </li>
         <li><%= link_to t('contact_us'), contact_us_path %></li>
         <li><%= link_to t('oh_maria'), oh_maria_path %></li>
+        <% if user_signed_in? %>
+            <li><%= link_to 'Sair »', destroy_user_session_path %></li>
+        <% end %>
     </ul>
 
 	<div id="nav-layer"></div>

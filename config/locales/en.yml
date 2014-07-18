@@ -26,5 +26,6 @@ en:
       user:
         email: Email
         password: Password
+        remember_me: Remember me
         password_confirmation: Password confirmation
         current_password: Current password
