@@ -32,6 +32,7 @@ en:
   activerecord:
     models:
       user: YTOLer
+      theme_reflection: Theme Reflection
     attributes:
       user:
         email: Email
@@ -39,6 +40,9 @@ en:
         remember_me: Remember me
         password_confirmation: Password confirmation
         current_password: Current password
+      theme_reflection:
+        question: 'What is God trying to tell me through this month's theme?'
+        created_at: Reflection Date
     errors:
       template:
         header:

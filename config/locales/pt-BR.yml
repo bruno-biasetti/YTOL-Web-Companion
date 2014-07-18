@@ -32,6 +32,7 @@ pt-BR:
   activerecord:
     models:
       user: Equipista
+      theme_reflection: Reflexão do Tema
     attributes:
       user:
         email: Email
@@ -39,6 +40,9 @@ pt-BR:
         remember_me: Lembre-se de mim
         password_confirmation: Confirmação da senha
         current_password: Senha atual
+      theme_reflection:
+        question: 'O que Deus está tentando me dizer através do tema deste mês?'
+        created_at: Data da Reflexão
     errors:
       template:
         header:
