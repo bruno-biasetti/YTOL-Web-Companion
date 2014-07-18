@@ -1,3 +1,12 @@
-<h1><%= t('the_movement') %></h1>
-
-<%= render "main_pages/the_movement/#{partial_locale}" %>
+<div id="movement-container" class="content-container">
+	
+	<div id="movement-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= t('the_movement') %></h2>
+	</div>
+	
+	<div id="movement-body" class="content-body">
+		<%= render "main_pages/the_movement/#{partial_locale}" %>
+	</div>
+	
+</div>

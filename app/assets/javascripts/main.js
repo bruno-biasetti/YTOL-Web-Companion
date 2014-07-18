@@ -6,6 +6,10 @@ $(document).on('ready page:load', function() {
 		
 		navDrawerWidth : 0,
 		
+		setupBodyHeight : function(){
+			$('body').height($('html').height());
+		},
+		
 		initNavDrawer : function(){
 			/*Nav Init State*/
 			this.navDrawerWidth = $('ul#nav-drawer-container').width();
@@ -89,13 +93,22 @@ $(document).on('ready page:load', function() {
 		
 		setupNotifications : function(){
 			var noticeTxt = $.trim($('.notice').text());
-			if ( noticeTxt.length == 0 ) { $('.notice').hide() };
+			if ( noticeTxt.length == 0 ) {
+				$('.notice').hide()
+			}else{
+				$('.notice').delay(2000).fadeOut('slow');
+			};
 			
 			var alertTxt = $.trim($('.alert').text());
-			if ( alertTxt.length == 0 ) { $('.alert').hide() };
+			if ( alertTxt.length == 0 ) { 
+				$('.alert').hide()
+			}else{
+				$('.alert').delay(2000).fadeOut('slow');
+			};
 		},
 		
 		init : function(){
+			this.setupBodyHeight();
 			this.initNavDrawer();
 			this.setupNotifications();
 		}

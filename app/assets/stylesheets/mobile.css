@@ -18,11 +18,10 @@
 @media screen and (max-width: 60.5em) {
   /*** CONTAINER ***/
   html,
-  body {
-    height: 100%;
-  }
-  #container,
-  .content-bg {
+  body,
+  div#container,
+  div#container-wrapper {
+    min-height: 100%;
     height: auto;
   }
   .notice,
@@ -187,5 +186,46 @@
     border: none !important;
     text-indent: -3000px;
     background: transparent url('sprite-map/spirte-round-icons.png') left -130px no-repeat scroll;
+  }
+  /*** APP INIT ***/
+  div#init-container li.init-link {
+    padding: 2.5em 0px;
+    overflow: hidden;
+  }
+  div#init-container li.init-link a,
+  div#init-container li.init-link span {
+    display: block;
+    float: left;
+    margin-left: 0em;
+  }
+  div#init-container li.init-link a {
+    font-size: 1.3em;
+    padding: 1em 0 1em 0.7em;
+  }
+  div#init-container li.init-link span.init-icon {
+    margin-left: 1em;
+    position: static;
+    top: 0%;
+    left: 0%;
+  }
+  /*** PAGE CONTENT ***/
+  .content-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+  }
+  .content-container .content-body {
+    width: 100%;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+  }
+  .content-container .content-body p {
+    -webkit-overflow-scrolling: touch !important;
   }
 }

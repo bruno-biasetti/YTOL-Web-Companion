@@ -15,8 +15,9 @@
 /*** BODY ***/
 html,
 body,
-#container,
-.content-bg {
+div#container,
+div#container-wrapper {
+  min-height: 100%;
   height: auto;
 }
 body {
@@ -43,6 +44,7 @@ strong {
   position: fixed;
   top: 30%;
   left: 10%;
+  z-index: 998;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 0;
@@ -62,7 +64,6 @@ div#container {
   clear: both;
   margin: 0;
   padding: 0;
-  height: 100%;
   padding: 2em 0 0 0;
 }
 .content-bg {
@@ -227,8 +228,9 @@ div#nav-drawer ul#nav-drawer-container {
   background-color: #f5f5f5;
   margin: 0;
   padding-top: 5em;
-  position: absolute;
+  position: fixed;
   z-index: 992;
+  top: 0;
   left: 0;
 }
 div#nav-drawer ul#nav-drawer-container li,
@@ -470,4 +472,125 @@ div.form-actions input.action-send {
   text-indent: -3000px;
   cursor: pointer;
   background: transparent url('sprite-map/spirte-round-icons.png') left -130px no-repeat scroll;
+}
+/*** APP INIT ***/
+div#init-container {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+div#init-container ul,
+div#init-container li {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+div#init-container li.init-link {
+  padding: 3.5em 0px;
+  border-bottom: 1px solid #FFF;
+  background-color: transparent;
+  text-align: center;
+  margin-bottom: 0.2em;
+  position: relative;
+}
+div#init-container li.init-link a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #c36b32;
+  text-align: center;
+  text-decoration: none;
+}
+div#init-container li.init-link span.init-icon {
+  width: 94px;
+  height: 70px;
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 27%;
+  background: transparent url('sprite-map/sprite-init-page.png') left top no-repeat scroll;
+}
+div#init-container li.movement-link span.init-icon {
+  background-position: left top;
+}
+div#init-container li.guide-link span.init-icon {
+  background-position: left -70px;
+}
+div#init-container li.contact-link span.init-icon {
+  background-position: left -140px;
+}
+div#init-container li.maria-link {
+  background-color: #FFF;
+}
+div#init-container li.maria-link span.init-icon {
+  top: 20%;
+  height: 85px;
+  background-position: left -210px;
+}
+/*** PAGE CONTENT ***/
+.content-container {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+.content-container .content-header {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  padding: 1.5em 0;
+  border-bottom: 1px solid #cccaca;
+}
+.content-container .content-header span {
+  width: 94px;
+  height: 74px;
+  display: block;
+  margin: 0 auto;
+  clear: both;
+  background: transparent url('sprite-map/sprite-header-icons.png') center top no-repeat scroll;
+}
+.content-container .content-header h2 {
+  width: 100%;
+  height: auto;
+  margin-top: 0.7em;
+  color: #c36b32;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: 500;
+}
+.content-container #movement-header span {
+  background-position: left top;
+}
+.content-container .content-body {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #FFF;
+  padding-top: 1.5em !important;
+}
+.content-container .content-body p {
+  width: 96%;
+  height: 35em;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em 2%;
+  overflow-y: scroll;
+  text-align: justify;
+  font-size: 1.1em;
+  color: #525354;
+  line-height: 1.3em;
 }

@@ -1,7 +1,20 @@
-<ul>
-  <li><%= link_to t('the_movement'), the_movement_path %></li>
-  <li><%= link_to t('meeting_guide'), meeting_guide_path %></li>
-  <li><%= link_to t('contact_us'), contact_us_path %></li>
-  <li><%= link_to t('oh_maria'), oh_maria_path %></li>
-  <li><%= link_to 'Sign in', new_user_session_path %></li>
-</ul>
+<div id="init-container">
+	<ul>
+		<li class="init-link movement-link">
+			<span class="init-icon"></span>
+			<%= link_to t('the_movement'), the_movement_path %>
+		</li>
+		<li class="init-link guide-link">
+			<span class="init-icon"></span>
+			<%= link_to t('meeting_guide'), meeting_guide_path %>
+		</li>
+		<li class="init-link contact-link">
+			<span class="init-icon"></span>
+			<%= link_to t('contact_us'), contact_us_path %>
+		</li>
+		<li class="init-link maria-link">
+			<span class="init-icon"></span>
+			<%= link_to t('oh_maria'), oh_maria_path %>
+		</li>
+	</ul>
+</div>
