@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
       resources :theme_reflections
 
+      resources :sharings
+
       get 'prayers' => 'prayers#index'
       scope 'prayers' do
         get 'magnificat' => 'prayers#magnificat'

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spiritual_life: MyText
+  god_relationship: MyText
+  family_relationship: MyText
+  testimony_to_society: MyText
+
+two:
+  spiritual_life: MyText
+  god_relationship: MyText
+  family_relationship: MyText
+  testimony_to_society: MyText

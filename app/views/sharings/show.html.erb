@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Spiritual life:</strong>
+  <%= @sharing.spiritual_life %>
+</p>
+
+<p>
+  <strong>God relationship:</strong>
+  <%= @sharing.god_relationship %>
+</p>
+
+<p>
+  <strong>Family relationship:</strong>
+  <%= @sharing.family_relationship %>
+</p>
+
+<p>
+  <strong>Testimony to society:</strong>
+  <%= @sharing.testimony_to_society %>
+</p>
+
+<%= link_to 'Edit', edit_sharing_path(@sharing) %> |
+<%= link_to 'Back', sharings_path %>

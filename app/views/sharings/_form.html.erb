@@ -1,0 +1,14 @@
+<%= simple_form_for(@sharing) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :spiritual_life %>
+    <%= f.input :god_relationship %>
+    <%= f.input :family_relationship %>
+    <%= f.input :testimony_to_society %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
