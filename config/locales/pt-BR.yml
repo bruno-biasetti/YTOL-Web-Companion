@@ -55,6 +55,7 @@ pt-BR:
         title: Qual é seu novo ponto de esforço?
         description: Descrição
         due_date: Meta de realização
+        created_at: Data de Criação
     errors:
       template:
         header:

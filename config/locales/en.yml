@@ -55,6 +55,7 @@ en:
         title: What is your new point of effort?
         description: Description
         due_date: Goal achievement
+        created_at: Creation Date
     errors:
       template:
         header:
