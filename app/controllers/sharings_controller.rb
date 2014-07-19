@@ -25,7 +25,7 @@ class SharingsController < ApplicationController
     @sharing.user = current_user
 
     if @sharing.save
-      flash[:notice] = 'Sharing was successfully created.'
+      flash[:notice] = t('helpers.success.create', model: Sharing.model_name.human)
       redirect_to sharings_path(locale: locale)
     else
       render :new
@@ -35,7 +35,7 @@ class SharingsController < ApplicationController
   # PATCH/PUT /sharings/1
   def update
     if @sharing.update(sharing_params)
-      flash[:notice] = 'Sharing was successfully updated.'
+      flash[:notice] = t('helpers.success.update', model: Sharing.model_name.human)
       redirect_to sharings_path(locale: locale)
     else
       render :edit
@@ -46,7 +46,7 @@ class SharingsController < ApplicationController
   def destroy
     @sharing.destroy
 
-    redirect_to sharings_url, notice: 'Sharing was successfully destroyed.'
+    redirect_to sharings_url, notice: t('helpers.success.delete', model: Sharing.model_name.human)
   end
 
   private

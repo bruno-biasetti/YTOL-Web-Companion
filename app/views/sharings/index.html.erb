@@ -1,4 +1,4 @@
-<h1>Listing sharings</h1>
+<h1><%= Sharing.model_name.human %></h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= sharing.family_relationship %></td>
         <td><%= sharing.testimony_to_society %></td>
         <td><%= l sharing.created_at, format: :date_only %></td>
-        <td><%= link_to 'Show', sharing_path(sharing, locale: locale) %></td>
-        <td><%= link_to 'Edit', edit_sharing_path(sharing, locale: locale) %></td>
-        <td><%= link_to 'Destroy', sharing_path(sharing, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('helpers.links.show'), sharing_path(sharing, locale: locale) %></td>
+        <td><%= link_to t('helpers.links.edit'), edit_sharing_path(sharing, locale: locale) %></td>
+        <td><%= link_to t('helpers.links.destroy'), sharing_path(sharing, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Sharing', new_sharing_path %>
+<%= link_to t('helpers.links.new', model: Sharing.model_name.human), new_sharing_path %>

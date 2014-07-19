@@ -1,5 +1,5 @@
-<h1>New point_of_effort</h1>
+<h1><%= PointOfEffort.model_name.human %></h1>
 
 <%= render 'form', custom_url: point_of_efforts_path(locale: locale) %>
 
-<%= link_to 'Back', point_of_efforts_path %>
+<%= link_to t('helpers.links.back'), point_of_efforts_path %>

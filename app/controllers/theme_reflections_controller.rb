@@ -26,7 +26,7 @@ class ThemeReflectionsController < ApplicationController
     @theme_reflection.user = current_user
 
     if @theme_reflection.save
-      flash[:notice] = 'Theme reflection was successfully created.'
+      flash[:notice] = t('helpers.success.create', model: ThemeReflection.model_name.human)
       redirect_to theme_reflections_path(locale: locale)
     else
       render :new
@@ -36,7 +36,7 @@ class ThemeReflectionsController < ApplicationController
   # PATCH/PUT /theme_reflections/1
   def update
     if @theme_reflection.update(theme_reflection_params)
-      flash[:notice] = 'Theme reflection was successfully updated.'
+      flash[:notice] = t('helpers.success.update', model: ThemeReflection.model_name.human)
       redirect_to theme_reflections_path(locale: locale)
     else
       render :edit
@@ -47,7 +47,7 @@ class ThemeReflectionsController < ApplicationController
   def destroy
     @theme_reflection.destroy
 
-    redirect_to theme_reflections_url, notice: 'Theme reflection was successfully destroyed.'
+    redirect_to theme_reflections_url, notice: t('helpers.success.delete', model: ThemeReflection.model_name.human)
   end
 
   private

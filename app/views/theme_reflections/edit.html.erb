@@ -1,6 +1,6 @@
-<h1>Editing theme_reflection</h1>
+<h1><%= ThemeReflection.model_name.human %></h1>
 
 <%= render 'form', custom_url: theme_reflection_path(@theme_reflection, locale: locale) %>
 
-<%= link_to 'Show', theme_reflection_path(@theme_reflection, locale: locale) %> |
-<%= link_to 'Back', theme_reflections_path(locale: locale) %>
+<%= link_to t('helpers.links.show'), theme_reflection_path(@theme_reflection, locale: locale) %> |
+<%= link_to t('helpers.links.back'), theme_reflections_path(locale: locale) %>

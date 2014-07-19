@@ -67,6 +67,18 @@ pt-BR:
       full_messages:
         format: "%{attribute} %{message}"
 
+  helpers:
+    success:
+      create: '%{model} criado com sucesso'
+      update: '%{model} alterado com sucesso'
+      delete: '%{model} excluído com sucesso'
+    links:
+      new: 'Novo %{model}'
+      show: Exibir
+      edit: Editar
+      destroy: Excluir
+      back: Voltar
+
   time:
     formats:
       date_only: "%d/%m/%Y"

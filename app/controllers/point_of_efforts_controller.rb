@@ -25,7 +25,7 @@ class PointOfEffortsController < ApplicationController
     @point_of_effort.user = current_user
 
     if @point_of_effort.save
-      flash[:notice] = 'Point of Effort was successfully created.'
+      flash[:notice] = t('helpers.success.create', model: PointOfEffort.model_name.human)
       redirect_to point_of_efforts_path(locale: locale)
     else
       render :new
@@ -35,7 +35,7 @@ class PointOfEffortsController < ApplicationController
   # PATCH/PUT /point_of_efforts/1
   def update
     if @point_of_effort.update(point_of_effort_params)
-      flash[:notice] = 'Point of Effort was successfully updated.'
+      flash[:notice] = t('helpers.success.update', model: PointOfEffort.model_name.human)
       redirect_to point_of_efforts_path(locale: locale)
     else
       render :edit
@@ -46,7 +46,7 @@ class PointOfEffortsController < ApplicationController
   def destroy
     @point_of_effort.destroy
 
-    redirect_to point_of_efforts_url, notice: 'Point of Effort was successfully destroyed.'
+    redirect_to point_of_efforts_url, notice: t('helpers.success.delete', model: PointOfEffort.model_name.human)
   end
 
   private

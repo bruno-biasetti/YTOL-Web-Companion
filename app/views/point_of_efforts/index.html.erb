@@ -1,4 +1,4 @@
-<h1>Listing point_of_efforts</h1>
+<h1><%= PointOfEffort.model_name.human %></h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= point_of_effort.description %></td>
         <td><%= l point_of_effort.due_date %></td>
         <td><%= l point_of_effort.created_at, format: :date_only %></td>
-        <td><%= link_to 'Show', point_of_effort_path(point_of_effort, locale: locale) %></td>
-        <td><%= link_to 'Edit', edit_point_of_effort_path(point_of_effort, locale: locale) %></td>
-        <td><%= link_to 'Destroy', point_of_effort_path(point_of_effort, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('helpers.links.show'), point_of_effort_path(point_of_effort, locale: locale) %></td>
+        <td><%= link_to t('helpers.links.edit'), edit_point_of_effort_path(point_of_effort, locale: locale) %></td>
+        <td><%= link_to t('helpers.links.destroy'), point_of_effort_path(point_of_effort, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Point of effort', new_point_of_effort_path %>
+<%= link_to t('helpers.links.new', model: PointOfEffort.model_name.human), new_point_of_effort_path %>

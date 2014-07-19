@@ -5,5 +5,5 @@
   <%= @theme_reflection.question %>
 </p>
 
-<%= link_to 'Edit', edit_theme_reflection_path(@theme_reflection, locale: locale) %> |
-<%= link_to 'Back', theme_reflections_path(locale: locale) %>
+<%= link_to t('helpers.links.edit'), edit_theme_reflection_path(@theme_reflection, locale: locale) %> |
+<%= link_to t('helpers.links.back'), theme_reflections_path(locale: locale) %>

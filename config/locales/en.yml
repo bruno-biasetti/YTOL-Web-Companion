@@ -67,6 +67,18 @@ en:
       full_messages:
         format: "%{attribute} %{message}"
 
+  helpers:
+    success:
+      create: '%{model} created successfully'
+      update: '%{model} updated successfully'
+      delete: '%{model} deleted successfully'
+    links:
+      new: 'New %{model}'
+      show: Show
+      edit: Edit
+      destroy: Delete
+      back: Back
+
   time:
     formats:
       date_only: "%m/%d/%Y"

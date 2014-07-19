@@ -20,5 +20,5 @@
   <%= @sharing.testimony_to_society %>
 </p>
 
-<%= link_to 'Edit', edit_sharing_path(@sharing, locale: locale) %> |
-<%= link_to 'Back', sharings_path(locale: locale) %>
+<%= link_to t('helpers.links.show'), edit_sharing_path(@sharing, locale: locale) %> |
+<%= link_to t('helpers.links.back'), sharings_path(locale: locale) %>

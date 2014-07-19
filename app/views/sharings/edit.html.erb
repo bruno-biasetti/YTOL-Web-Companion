@@ -1,6 +1,6 @@
-<h1>Editing sharing</h1>
+<h1><%= Sharing.model_name.human %></h1>
 
 <%= render 'form', custom_url: sharing_path(@sharing, locale: locale) %>
 
-<%= link_to 'Show', sharing_path(@sharing, locale: locale) %> |
-<%= link_to 'Back', sharings_path(locale: locale) %>
+<%= link_to t('helpers.links.show'), sharing_path(@sharing, locale: locale) %> |
+<%= link_to t('helpers.links.back'), sharings_path(locale: locale) %>
