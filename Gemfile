@@ -36,6 +36,10 @@ gem 'simple_form'
 
 gem 'aws-ses', '~> 0.5.0', require: 'aws/ses'
 
+gem 'rails_12factor', group: :production
+
+gem 'pg', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
