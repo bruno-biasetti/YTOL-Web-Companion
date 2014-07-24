@@ -1,5 +1,6 @@
 class SharingsController < ApplicationController
   before_action :set_sharing, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /sharings
   def index

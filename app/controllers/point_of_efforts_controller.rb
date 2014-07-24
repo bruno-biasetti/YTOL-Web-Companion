@@ -1,5 +1,6 @@
 class PointOfEffortsController < ApplicationController
   before_action :set_point_of_effort, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /point_of_efforts
   def index
