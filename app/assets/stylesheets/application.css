@@ -11,7 +11,7 @@
  * file per style scope.
  *
  *= require_self
- *= require reset
- *= require general
- *= require mobile
+ *= require reset.css.erb
+ *= require general.css.erb
+ *= require mobile.css.erb
  */
