@@ -1,3 +1,14 @@
-<h1><%= t('oh_maria') %></h1>
-
-<%= render "main_pages/oh_maria/#{partial_locale}" %>
+<div id="maria-container" class="content-container">
+	
+	<div id="maria-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= t('oh_maria') %></h2>
+	</div>
+	
+	<div id="maria-body" class="content-body">
+		
+		<%= render "main_pages/oh_maria/#{partial_locale}" %>
+		
+	</div>
+	
+</div>

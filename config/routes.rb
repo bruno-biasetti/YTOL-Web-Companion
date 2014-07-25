@@ -41,6 +41,8 @@ Rails.application.routes.draw do
     get 'contact_us' => 'main_pages#contact_us'
 
     get 'oh_maria' => 'main_pages#oh_maria'
+    
+    get 'oh_maria_video' => 'main_pages#oh_maria_video'
 
   end
 

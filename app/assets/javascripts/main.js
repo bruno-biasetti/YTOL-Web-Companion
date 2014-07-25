@@ -130,11 +130,33 @@ $(document).on('ready page:load', function() {
 			};
 		},
 		
+		setupMariaVideo : function(){
+			var hasVideo = $('#video-container').length;
+			if ( hasVideo > 0 ){
+				$('#video-container').text("");
+				$('#video-container').html('<iframe width="100%" height="auto" src="//www.youtube-nocookie.com/embed/z4yGHPRbjow?rel=0" frameborder="0" allowfullscreen></iframe>');
+			};
+		},
+		
+		setupLoadClick : function(){
+			$('#load-click').hide();
+			
+			$('#nav-drawer a').click(function() {
+				$('#load-click').show();
+			});
+			
+			$('#container-wrapper a').click(function() {
+				$('#load-click').show();
+			});
+		},
+		
 		init : function(){
 			this.setupBodyHeight();
 			this.initNavDrawer();
 			this.setupNotifications();
 			this.setupActionList();
+			this.setupMariaVideo();
+			this.setupLoadClick();
 		}
 		
 	};

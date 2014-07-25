@@ -1,13 +1,13 @@
 <%= simple_form_for(@point_of_effort, url: custom_url) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs multi-question">
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :due_date %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class => "action-submit"   %>
   </div>
 <% end %>

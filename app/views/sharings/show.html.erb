@@ -1,24 +1,41 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Spiritual life:</strong>
-  <%= @sharing.spiritual_life %>
-</p>
-
-<p>
-  <strong>God relationship:</strong>
-  <%= @sharing.god_relationship %>
-</p>
-
-<p>
-  <strong>Family relationship:</strong>
-  <%= @sharing.family_relationship %>
-</p>
-
-<p>
-  <strong>Testimony to society:</strong>
-  <%= @sharing.testimony_to_society %>
-</p>
-
-<%= link_to t('helpers.links.show'), edit_sharing_path(@sharing, locale: locale) %> |
-<%= link_to t('helpers.links.back'), sharings_path(locale: locale) %>
+<div id="sharings-show-container" class="content-container">
+	
+	<div id="sharings-show-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= Sharing.model_name.human %></h2>
+	</div>
+	
+	<p id="notice"><%= notice %></p>
+	
+	<div id="sharings-show-body" class="content-body">
+		
+		<p class="show show-quote show-big">
+			<strong><%= l @sharing.created_at, format: :date_only %></strong>
+			<br /><br />
+		 	
+			<strong>Spiritual life:</strong>
+			<span class="response-block"><%= @sharing.spiritual_life %></span>
+			<br />
+			
+			<strong>God relationship:</strong>
+			<span class="response-block"><%= @sharing.god_relationship %></span>
+			<br />
+			
+			<strong>Family relationship:</strong>
+			<span class="response-block"><%= @sharing.family_relationship %></span>
+			<br />
+			
+			<strong>Testimony to society:</strong>
+			<span class="response-block"><%= @sharing.testimony_to_society %></span>
+		</p>
+		
+		<div class="form-actions">
+			<%= link_to t('helpers.links.edit'), edit_sharing_path(@sharing, locale: locale), :class => "action-submit" %>
+			<%= link_to t('helpers.links.back'), sharings_path(locale: locale), :class => "default-submit" %>
+		</div>
+		
+	</div>
+	
+	<%= render "sharings/bottom_action_bar" %>
+	
+</div>

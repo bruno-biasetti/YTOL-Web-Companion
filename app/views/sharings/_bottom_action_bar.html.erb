@@ -2,7 +2,7 @@
 	current_uri = request.env['PATH_INFO']
 	if current_uri.index("edit") == nil %>
 		
-		<div id="reflections-bottom" class="content-bottom-action-bar action-bar-standalone">
+		<div id="shargins-bottom" class="content-bottom-action-bar action-bar-standalone">
 			<% if current_uri.index("new") != nil %>
 				<%= link_to t('helpers.links.back'), sharings_path(locale: locale) %>
 			<% else %>
@@ -12,10 +12,10 @@
 		
 	<% else %>
 		
-		<div id="reflections-bottom" class="content-bottom-action-bar">
+		<div id="shargins-bottom" class="content-bottom-action-bar">
 			<ul>
-				<li><%= link_to t('helpers.links.show'), theme_reflection_path(@theme_reflection, locale: locale) %></li>
-				<li><%= link_to t('helpers.links.back'), theme_reflections_path(locale: locale) %></li>
+				<li><%= link_to t('helpers.links.show'), sharing_path(@sharing, locale: locale) %></li>
+				<li><%= link_to t('helpers.links.back'), sharings_path(locale: locale) %></li>
 			</ul>
 		</div>
 		

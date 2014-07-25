@@ -1,31 +1,51 @@
-<h1><%= PointOfEffort.model_name.human %></h1>
-
-<table>
-  <thead>
-    <tr>
-      <th><%= PointOfEffort.human_attribute_name(:title) %></th>
-      <th><%= PointOfEffort.human_attribute_name(:description) %></th>
-      <th><%= PointOfEffort.human_attribute_name(:due_date) %></th>
-      <th><%= PointOfEffort.human_attribute_name(:created_at) %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @point_of_efforts.each do |point_of_effort| %>
-      <tr>
-        <td><%= point_of_effort.title %></td>
-        <td><%= point_of_effort.description %></td>
-        <td><%= l point_of_effort.due_date %></td>
-        <td><%= l point_of_effort.created_at, format: :date_only %></td>
-        <td><%= link_to t('helpers.links.show'), point_of_effort_path(point_of_effort, locale: locale) %></td>
-        <td><%= link_to t('helpers.links.edit'), edit_point_of_effort_path(point_of_effort, locale: locale) %></td>
-        <td><%= link_to t('helpers.links.destroy'), point_of_effort_path(point_of_effort, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to t('helpers.links.new', model: PointOfEffort.model_name.human), new_point_of_effort_path %>
+<div id="efforts-container" class="content-container">
+	
+	<div id="efforts-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= PointOfEffort.model_name.human %></h2>
+	</div>
+	
+	<div id="efforts-body" class="content-body">
+		<!--
+			<%= PointOfEffort.human_attribute_name(:title) %><br />
+			<%= PointOfEffort.human_attribute_name(:description) %><br />
+			<%= PointOfEffort.human_attribute_name(:due_date) %><br />
+			<%= PointOfEffort.human_attribute_name(:created_at) %>
+		-->
+		
+		<ul class="content-list">
+			<% @point_of_efforts.each do |point_of_effort| %>
+				<!--
+					<%= point_of_effort.title %><br />
+					<%= point_of_effort.description %><br />
+					<%= l point_of_effort.due_date %><br />
+					<%= l point_of_effort.created_at, format: :date_only %>
+				-->
+				<li class="content-list-item">
+					<span class="circle-icon circle-uncheck"></span>
+					<h3 class="list-item-title">
+						<%= link_to (l point_of_effort.created_at, format: :date_only), point_of_effort_path(point_of_effort, locale: locale) %>
+					</h3>
+					<div class="clearfix"></div>
+					<h4 class="list-item-desc"><%= point_of_effort.title %></h4>
+					
+					<div class="list-item-actions">
+						<ul class="actions-list">
+							<li class="actions-list-item action-edit">
+								<%= link_to t('helpers.links.edit'), edit_point_of_effort_path(point_of_effort, locale: locale) %>
+							</li>
+							<li class="actions-list-item action-delete">
+								<%= link_to t('helpers.links.destroy'), point_of_effort_path(point_of_effort, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %>
+							</li>
+						</ul>
+					</div>
+					
+				</li>
+			<% end %>
+		</ul>
+		
+	</div>
+	
+	<%= render "point_of_efforts/bottom_action_bar" %>
+	
+</div>

@@ -209,6 +209,44 @@ div#action-bar ul li#icon-title h2 {
   color: #FFF;
   margin: 0.3em 0 0 0.5em;
 }
+/*** LOAD CLICK ***/
+div#load-click {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+}
+div#load-click #load-container {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0px 0px -25px;
+  padding: 0;
+  background-color: #FFF;
+  border-radius: 10px;
+  z-index: 998;
+}
+div#load-click #load-container img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin: 1em auto;
+}
+div#load-click #load-layer {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  background-color: #000;
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  filter: alpha(opacity=70);
+}
 /*** NAVIGATION DRAWER ***/
 div#nav-drawer {
   width: 100%;
@@ -608,8 +646,24 @@ div#init-container li.maria-link span.init-icon {
 }
 .content-container #sharings-header span,
 .content-container #sharings-new-header span,
+.content-container #sharings-show-header span,
 .content-container #sharings-edit-header span {
   background-position: -144px -430px;
+}
+.content-container #efforts-header span,
+.content-container #efforts-new-header span,
+.content-container #efforts-show-header span,
+.content-container #efforts-edit-header span {
+  background-position: -144px -430px;
+}
+.content-container #contact-header span {
+  background-position: -144px -220px;
+}
+.content-container #maria-header span {
+  background-position: -144px -430px;
+}
+.content-container #maria-video-header span {
+  background-position: -144px -630px;
 }
 .content-container .content-body {
   width: 100%;
@@ -650,6 +704,18 @@ div#init-container li.maria-link span.init-icon {
 .content-container .content-body .show-quote {
   font-style: italic;
 }
+.content-container .content-body .show-big {
+  text-align: left !important;
+}
+.content-container .content-body .response-block {
+  display: block;
+  width: 96%;
+  height: auto;
+  padding: 0.5em 2%;
+  margin: 0.5em 0 0 0;
+  background-color: #DDD;
+  border-bottom: 2px solid #AAA;
+}
 .content-container .content-body .content-list {
   width: 100%;
   height: auto;
@@ -683,7 +749,7 @@ div#init-container li.maria-link span.init-icon {
   float: left;
   padding: 0.5em 0;
   margin: 0.4em 0 0.4em 10%;
-  background: transparent url('bg/bg-arrow.png') right 10px no-repeat scroll;
+  background: transparent url(<%= asset_path('bg/bg-arrow.png') %>) right 10px no-repeat scroll;
 }
 .content-container .content-body .content-list .content-list-item span.list-item-icon {
   width: 55px;
@@ -692,7 +758,7 @@ div#init-container li.maria-link span.init-icon {
   margin: 0 0 0 9%;
   padding: 0;
   float: left;
-  background: transparent url('sprite-map/sprite-list-icons.png') left top no-repeat scroll;
+  background: transparent url(<%= asset_path('sprite-map/sprite-list-icons.png') %>) left top no-repeat scroll;	
 }
 .content-container .content-body .content-list .content-list-item span.prayer-icon {
   background-position: -10px -10px;
@@ -720,6 +786,21 @@ div#init-container li.maria-link span.init-icon {
 }
 .content-container .content-body .content-list .content-list-item span.rosary-icon {
   background-position: -95px -95px;
+}
+.content-container .content-body .content-list .content-list-item span.web-icon {
+  background-position: -265px -95px;
+}
+.content-container .content-body .content-list .content-list-item span.fb-icon {
+  background-position: -350px -95px;
+}
+.content-container .content-body .content-list .content-list-item span.mail-icon {
+  background-position: -435px -95px;
+}
+.content-container .content-body .content-list .content-list-item span.video-icon {
+  background-position: -10px -180px;
+}
+.content-container .content-body .content-list .content-list-item span.song-icon {
+  background-position: -520px -95px;
 }
 .content-container .content-body .content-list .content-list-item .circle-icon {
   width: 28px;
@@ -825,6 +906,15 @@ div#init-container li.maria-link span.init-icon {
 .content-container .content-body .single-question textarea {
   width: 100%;
 }
+.content-container .content-body .multi-question label {
+  width: 100%;
+  display: block;
+  margin: 1em 0;
+  color: #c36b32;
+  font-size: 1.3em;
+  font-weight: 300;
+  text-align: left;
+}
 .content-container .content-body .form-actions input {
   width: 60%;
   height: auto;
@@ -879,6 +969,19 @@ div#init-container li.maria-link span.init-icon {
   border-left: none;
   border-right: none;
   border-bottom: 4px solid #777;
+}
+.content-container .content-body #video-container {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 1em 0;
+}
+.content-container .content-body #video-container iframe {
+  height: 30em;
+}
+.content-container #contact-body .list-item-desc,
+.content-container #maria-body .list-item-desc {
+  padding-left: 25%;
 }
 .content-container .content-bottom-action-bar {
   width: 100%;
@@ -940,3 +1043,4 @@ div#init-container li.maria-link span.init-icon {
   text-decoration: none;
   text-transform: uppercase;
 }
+/** <%= asset_path('bg/bg-main.jpg') %> **/
