@@ -1,9 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Question:</strong>
-  <%= @theme_reflection.question %>
-</p>
-
-<%= link_to t('helpers.links.edit'), edit_theme_reflection_path(@theme_reflection, locale: locale) %> |
-<%= link_to t('helpers.links.back'), theme_reflections_path(locale: locale) %>
+<div id="reflections-new-container" class="content-container">
+	
+	<div id="reflections-new-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= ThemeReflection.model_name.human %></h2>
+	</div>
+	
+	<p id="notice"><%= notice %></p>
+	
+	<div id="reflections-new-body" class="content-body">
+		
+		<p class="show show-quote">
+			<strong><%= l @theme_reflection.created_at, format: :date_only %></strong><br />
+		 	<%= @theme_reflection.question %>
+		</p>
+		
+		<div class="form-actions">
+			<%= link_to t('helpers.links.edit'), edit_theme_reflection_path(@theme_reflection, locale: locale), :class => "action-submit" %>
+			<%= link_to t('helpers.links.back'), theme_reflections_path(locale: locale), :class => "default-submit" %>
+		</div>
+		
+	</div>
+	
+	<%= render "theme_reflections/bottom_action_bar" %>
+	
+</div>

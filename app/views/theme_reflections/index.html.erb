@@ -1,27 +1,43 @@
-<h1><%= ThemeReflection.model_name.human %></h1>
-
-<table>
-  <thead>
-    <tr>
-      <th><%= ThemeReflection.human_attribute_name(:question) %></th>
-      <th><%= ThemeReflection.human_attribute_name(:created_at) %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @theme_reflections.each do |theme_reflection| %>
-      <tr>
-        <td><%= theme_reflection.question %></td>
-        <td><%= l theme_reflection.created_at, format: :date_only %></td>
-        <td><%= link_to t('helpers.links.show'), theme_reflection_path(theme_reflection, locale: locale) %></td>
-        <td><%= link_to t('helpers.links.edit'), edit_theme_reflection_path(theme_reflection, locale: locale) %></td>
-        <td><%= link_to t('helpers.links.destroy'), theme_reflection_path(theme_reflection, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to t('helpers.links.new', model: ThemeReflection.model_name.human), new_theme_reflection_path %>
+<div id="reflections-container" class="content-container">
+	
+	<div id="reflections-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= ThemeReflection.model_name.human %></h2>
+	</div>
+	
+	<div id="reflections-body" class="content-body">
+		<!--
+			<%= ThemeReflection.human_attribute_name(:question) %><br />
+			<%= ThemeReflection.human_attribute_name(:created_at) %>
+		-->
+		
+		<ul class="content-list">
+			<% @theme_reflections.each do |theme_reflection| %>
+				<li class="content-list-item">
+					<span class="circle-icon circle-uncheck"></span>
+					<h3 class="list-item-title">
+						<%= link_to (l theme_reflection.created_at, format: :date_only), theme_reflection_path(theme_reflection, locale: locale) %>
+					</h3>
+					<div class="clearfix"></div>
+					<h4 class="list-item-desc"><%= theme_reflection.question %></h4>
+					
+					<div class="list-item-actions">
+						<ul class="actions-list">
+							<li class="actions-list-item action-edit">
+								<%= link_to t('helpers.links.edit'), edit_theme_reflection_path(theme_reflection, locale: locale) %>
+							</li>
+							<li class="actions-list-item action-delete">
+								<%= link_to t('helpers.links.destroy'), theme_reflection_path(theme_reflection, locale: locale), method: :delete, data: { confirm: 'Are you sure?' } %>
+							</li>
+						</ul>
+					</div>
+					
+				</li>
+			<% end %>
+		</ul>
+		
+	</div>
+	
+	<%= render "theme_reflections/bottom_action_bar" %>
+	
+</div>

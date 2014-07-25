@@ -1,1 +1,21 @@
-<h1><%= t('how_to_pray') %></h1>
+<div id="rosary-container" class="content-container">
+	
+	<div id="rosary-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= t('how_to_pray') %></h2>
+	</div>
+	
+	<div id="rosary-body" class="content-body">
+		
+		<ul class="content-list">
+		    <li class="content-list-item"><%= link_to t('joyful_mysteries'), joyful_mysteries_path %></li>
+		    <li class="content-list-item"><%= link_to t('sorrowful_mysteries'), sorrowful_mysteries_path %></li>
+		    <li class="content-list-item"><%= link_to t('glorious_mysteries'), glorious_mysteries_path %></li>
+		    <li class="content-list-item"><%= link_to t('mysteries_of_light'), mysteries_of_light_path %></li>
+		</ul>
+		
+	</div>
+	
+	<%= render "rosary/bottom_action_bar" %>
+	
+</div>

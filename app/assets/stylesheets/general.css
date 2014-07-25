@@ -435,7 +435,8 @@ div.input label {
   margin: 0.7em 0;
 }
 div.input input.string,
-div.input input.password {
+div.input input.password,
+div.input textarea {
   width: 98% !important;
   margin: 0;
   padding: 0.2em 1%;
@@ -554,7 +555,7 @@ div#init-container li.maria-link span.init-icon {
 }
 .content-container .content-header span {
   width: 94px;
-  height: 74px;
+  height: 64px;
   display: block;
   margin: 0 auto;
   clear: both;
@@ -570,7 +571,45 @@ div#init-container li.maria-link span.init-icon {
   font-weight: 500;
 }
 .content-container #movement-header span {
-  background-position: left top;
+  background-position: -10px -10px;
+}
+.content-container #guide-header span {
+  background-position: -144px -10px;
+}
+.content-container #prayers-header span {
+  background-position: -10px -110px;
+}
+.content-container #magnificat-header span {
+  background-position: -10px -215px;
+}
+.content-container #timeout-header span {
+  background-position: -10px -320px;
+}
+.content-container #mary-header span {
+  background-position: -10px -215px;
+}
+.content-container #spirit-header span {
+  background-position: -10px -530px;
+}
+.content-container #father-header span {
+  background-position: -10px -630px;
+}
+.content-container #rosary-header span,
+.content-container #mistery-glorious-header span,
+.content-container #mistery-joyful-header span,
+.content-container #mistery-light-header span,
+.content-container #mistery-sorrowful-header span {
+  background-position: -10px -420px;
+}
+.content-container #reflections-header span,
+.content-container #reflections-new-header span,
+.content-container #reflections-edit-header span {
+  background-position: -144px -110px;
+}
+.content-container #sharings-header span,
+.content-container #sharings-new-header span,
+.content-container #sharings-edit-header span {
+  background-position: -144px -430px;
 }
 .content-container .content-body {
   width: 100%;
@@ -580,7 +619,7 @@ div#init-container li.maria-link span.init-icon {
   margin: 0;
   padding: 0;
   border-top: 1px solid #FFF;
-  padding-top: 1.5em !important;
+  padding-top: 0 !important;
 }
 .content-container .content-body p {
   width: 96%;
@@ -593,4 +632,311 @@ div#init-container li.maria-link span.init-icon {
   font-size: 1.1em;
   color: #525354;
   line-height: 1.3em;
+}
+.content-container .content-body .show {
+  width: 96%;
+  height: auto;
+  min-height: auto;
+  max-height: 35em;
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em 2%;
+  overflow-y: scroll;
+  text-align: justify;
+  font-size: 1.1em;
+  color: #525354;
+  line-height: 1.3em;
+}
+.content-container .content-body .show-quote {
+  font-style: italic;
+}
+.content-container .content-body .content-list {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+.content-container .content-body .content-list .content-list-item {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #cccaca;
+  border-top: 1px solid #FFF;
+  color: #c36b32;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 1.5em 0 !important;
+  overflow: hidden;
+  clear: both;
+}
+.content-container .content-body .content-list .content-list-item a {
+  color: #c36b32;
+  font-weight: 400;
+  font-size: 1.2em;
+  text-decoration: none;
+  display: block;
+  width: 65%;
+  float: left;
+  padding: 0.5em 0;
+  margin: 0.4em 0 0.4em 10%;
+  background: transparent url('bg/bg-arrow.png') right 10px no-repeat scroll;
+}
+.content-container .content-body .content-list .content-list-item span.list-item-icon {
+  width: 55px;
+  height: 55px;
+  display: block;
+  margin: 0 0 0 9%;
+  padding: 0;
+  float: left;
+  background: transparent url('sprite-map/sprite-list-icons.png') left top no-repeat scroll;
+}
+.content-container .content-body .content-list .content-list-item span.prayer-icon {
+  background-position: -10px -10px;
+}
+.content-container .content-body .content-list .content-list-item span.reflection-icon {
+  background-position: -95px -10px;
+}
+.content-container .content-body .content-list .content-list-item span.sharing-icon {
+  background-position: -180px -10px;
+}
+.content-container .content-body .content-list .content-list-item span.effort-icon {
+  background-position: -265px -10px;
+}
+.content-container .content-body .content-list .content-list-item span.mary-icon {
+  background-position: -350px -10px;
+}
+.content-container .content-body .content-list .content-list-item span.spirit-icon {
+  background-position: -435px -10px;
+}
+.content-container .content-body .content-list .content-list-item span.cross-icon {
+  background-position: -520px -10px;
+}
+.content-container .content-body .content-list .content-list-item span.time-icon {
+  background-position: -10px -95px;
+}
+.content-container .content-body .content-list .content-list-item span.rosary-icon {
+  background-position: -95px -95px;
+}
+.content-container .content-body .content-list .content-list-item .circle-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  float: left;
+  margin: 1.2em 0 0 9%;
+  cursor: pointer;
+  border: 1px solid #f99d4e;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+.content-container .content-body .content-list .content-list-item .circle-uncheck {
+  background-color: transparent;
+}
+.content-container .content-body .content-list .content-list-item .circle-check {
+  background-color: #f99d4e;
+}
+.content-container .content-body .content-list .content-list-item h3.list-item-title a {
+  font-size: 1.8em;
+  font-weight: 200;
+  padding: 0.2em 0;
+  margin: 0.4em 0em 0.4em 10%;
+}
+.content-container .content-body .content-list .content-list-item h4.list-item-desc {
+  width: auto;
+  height: auto;
+  display: block;
+  clear: both;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  padding: 0 0 0 22%;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: 1em 0px;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions ul {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions ul li {
+  display: block;
+  float: left;
+  margin-right: 1em;
+  width: 49%;
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions ul li a {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-image: none;
+  text-align: center;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions ul li:first-child {
+  margin-left: 1%;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions ul li.action-edit {
+  background-color: #49f371;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions ul li.action-edit a {
+  color: #288d40;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions ul li.action-delete {
+  background-color: #ff6060;
+}
+.content-container .content-body .content-list .content-list-item .list-item-actions ul li.action-delete a {
+  color: #8e3333;
+}
+.content-container .content-body .content-list .content-list-item:first-child {
+  border-top: none;
+}
+.content-container .content-body .content-list .content-list-item:last-child {
+  border-bottom: none;
+}
+.content-container .content-body .single-question label {
+  width: 100%;
+  display: block;
+  color: #c36b32;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+}
+.content-container .content-body .single-question textarea {
+  width: 100%;
+}
+.content-container .content-body .form-actions input {
+  width: 60%;
+  height: auto;
+  display: block;
+  padding: 1em 0;
+  margin: 0 auto;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #999;
+  border-bottom: 4px solid #999;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.content-container .content-body .form-actions a {
+  width: 60%;
+  height: auto;
+  display: block;
+  padding: 0.7em 0;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  background-color: transparent;
+  cursor: pointer;
+  clear: both;
+  font-size: 1.1em;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #999;
+  border-bottom: 4px solid #999;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.content-container .content-body .form-actions .action-submit {
+  color: #FFF;
+  background-color: #f69856;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 4px solid #bd683c;
+}
+.content-container .content-body .form-actions .default-submit {
+  color: #777;
+  background-color: #FFF;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 4px solid #777;
+}
+.content-container .content-bottom-action-bar {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.content-container .content-bottom-action-bar ul {
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+.content-container .content-bottom-action-bar ul li {
+  display: block;
+  float: left;
+  margin-right: 1em;
+  width: 49%;
+  margin: 0;
+  padding: 1.5em 0;
+  padding: 20px 0px;
+  text-align: center;
+  color: #FFF;
+}
+.content-container .content-bottom-action-bar ul li a {
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1.2em !important;
+}
+.content-container .content-bottom-action-bar ul li.active a,
+.content-container .content-bottom-action-bar ul li a:active {
+  text-decoration: underline !important;
+  font-style: italic;
+}
+.content-container .content-bottom-action-bar ul li:first-child {
+  margin-left: 1%;
+  border-right: 1px solid #000;
+}
+.content-container .content-bottom-action-bar ul li:last-child {
+  border-left: 1px solid #777;
+}
+.content-container .action-bar-standalone a {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 1.5em 0;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }

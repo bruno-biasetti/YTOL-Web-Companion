@@ -1,0 +1,14 @@
+<div id="rosary-bottom" class="content-bottom-action-bar">
+	<ul>
+		<%
+			current_uri = request.env['PATH_INFO']
+			if current_uri.index("how_to_pray") == nil
+		%>
+			<li class="active"><%= link_to t('the_rosary'), the_rosary_path %></li>
+			<li><%= link_to t('how_to_pray'), how_to_pray_path %></li>
+		<% else %>
+			<li><%= link_to t('the_rosary'), the_rosary_path %></li>
+			<li class="active"><%= link_to t('how_to_pray'), how_to_pray_path %></li>
+		<% end %>
+	</ul>
+</div>

@@ -1,10 +1,12 @@
 <%= simple_form_for(@theme_reflection, url: custom_url) do |f| %>
   <%= f.error_notification %>
 
-  <div class="field">
+  <div class="field single-question">
     <%= f.input :question, prompt: :translate %>
   </div>
-  <div class="actions">
-    <%= f.button :submit %>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => "action-submit" %>
   </div>
+
 <% end %>

@@ -1,3 +1,12 @@
-<h1><%= t('holy_spirit') %></h1>
-
-<%= render "prayers/holy_spirit/#{partial_locale}" %>
+<div id="spirit-container" class="content-container">
+	
+	<div id="spirit-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= t('holy_spirit') %></h2>
+	</div>
+	
+	<div id="spirit-body" class="content-body">
+		<%= render "prayers/holy_spirit/#{partial_locale}" %>
+	</div>
+	
+</div>

@@ -107,10 +107,34 @@ $(document).on('ready page:load', function() {
 			};
 		},
 		
+		setupActionList : function(){
+			var hasActionList = $('.list-item-actions').length;
+			if ( hasActionList > 0 ){
+				$('.list-item-actions').hide();
+				
+				$('.circle-icon').click(function() {
+					if ( $(this).hasClass('circle-uncheck') ){
+						$(this).removeClass('circle-uncheck');
+						$(this).addClass('circle-check');
+						
+						$(this).parent('li').find('.list-item-actions').slideDown('fast');
+						
+					}else{
+						$(this).removeClass('circle-check');
+						$(this).addClass('circle-uncheck');
+						
+						$(this).parent('li').find('.list-item-actions').slideUp('fast');
+						
+					};
+				});
+			};
+		},
+		
 		init : function(){
 			this.setupBodyHeight();
 			this.initNavDrawer();
 			this.setupNotifications();
+			this.setupActionList();
 		}
 		
 	};
