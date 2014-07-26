@@ -142,7 +142,9 @@ $(document).on('ready page:load', function() {
 			$('#load-click').hide();
 			
 			$('#nav-drawer a').click(function() {
-				$('#load-click').show();
+				if ( !$(this).hasClass('arrow-ctrl') ){
+					$('#load-click').show();
+				};
 			});
 			
 			$('#container-wrapper a').click(function() {

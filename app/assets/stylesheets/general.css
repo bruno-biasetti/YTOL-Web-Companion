@@ -21,7 +21,7 @@ div#container-wrapper {
   height: auto;
 }
 body {
-  background: #8ea9b2 url(<%= asset_path('bg/bg-main.jpg') %>) center top no-repeat scroll;
+  background: #8ea9b2 url('bg/bg-main.jpg') center top no-repeat scroll;
 }
 h1,
 h2,
@@ -67,7 +67,7 @@ div#container {
   padding: 2em 0 0 0;
 }
 .content-bg {
-  background: transparent url(<%= asset_path('bg/bg-content.png') %>) left top repeat;
+  background: transparent url('bg/bg-content.png') left top repeat;
 }
 /*************************************/
 /*** APPLICATION *********************/
@@ -128,7 +128,7 @@ div#landing-wrapper div#nav-enter ul li a {
   text-transform: uppercase;
 }
 div#landing-wrapper div#nav-enter ul li.flag a {
-  background: transparent url(<%= asset_path('sprite-map/sprite-flags.png') %>) left top no-repeat scroll;
+  background: transparent url('sprite-map/sprite-flags.png') left top no-repeat scroll;
 }
 div#landing-wrapper div#nav-enter ul li.br-flag a {
   background-position: left bottom;
@@ -181,7 +181,7 @@ div#action-bar ul li#call-action-nav {
 }
 div#action-bar ul li#call-nav-drawer a,
 div#action-bar ul li#call-action-nav a {
-  background: transparent url(<%= asset_path('sprite-map/sprite-action-bar-navs.png') %>) left top no-repeat scroll;
+  background: transparent url('sprite-map/sprite-action-bar-navs.png') left top no-repeat scroll;
   text-indent: -3000px;
   display: block;
   height: 23px;
@@ -287,7 +287,7 @@ div#nav-drawer ul#nav-drawer-container a.arrow-ctrl {
   display: block;
   float: right;
   margin: 0.5em 0 0 0;
-  background: url(<%= asset_path('sprite-map/sprite-nav-draw-arrow.png') %>) left top no-repeat scroll;
+  background: url('sprite-map/sprite-nav-draw-arrow.png') left top no-repeat scroll;
 }
 div#nav-drawer ul#nav-drawer-container a.arrow-down {
   background-position: left bottom;
@@ -411,7 +411,7 @@ div#register-header div#register-header-wrapper span.register-icon {
   height: 55px;
   display: block;
   margin: 0.5em auto;
-  background: transparent url(<%= asset_path('sprite-map/spirte-round-icons.png') %>) left top no-repeat scroll;
+  background: transparent url('sprite-map/spirte-round-icons.png') left top no-repeat scroll;
 }
 div#register-header div#register-header-wrapper span.icon-signin-on {
   background-position: left top;
@@ -512,7 +512,7 @@ div.form-actions input.action-send {
   border: none !important;
   text-indent: -3000px;
   cursor: pointer;
-  background: transparent url(<%= asset_path('sprite-map/spirte-round-icons.png') %>) left -130px no-repeat scroll;
+  background: transparent url('sprite-map/spirte-round-icons.png') left -130px no-repeat scroll;
 }
 /*** APP INIT ***/
 div#init-container {
@@ -555,7 +555,7 @@ div#init-container li.init-link span.init-icon {
   position: absolute;
   top: 25%;
   left: 27%;
-  background: transparent url(<%= asset_path('sprite-map/sprite-init-page.png') %>) left top no-repeat scroll;
+  background: transparent url('sprite-map/sprite-init-page.png') left top no-repeat scroll;
 }
 div#init-container li.movement-link span.init-icon {
   background-position: left top;
@@ -599,7 +599,7 @@ div#init-container li.maria-link span.init-icon {
   display: block;
   margin: 0 auto;
   clear: both;
-  background: transparent url(<%= asset_path('sprite-map/sprite-header-icons.png') %>) center top no-repeat scroll;
+  background: transparent url('sprite-map/sprite-header-icons.png') center top no-repeat scroll;
 }
 .content-container .content-header h2 {
   width: 100%;
@@ -751,7 +751,7 @@ div#init-container li.maria-link span.init-icon {
   float: left;
   padding: 0.5em 0;
   margin: 0.4em 0 0.4em 10%;
-  background: transparent url(<%= asset_path('bg/bg-arrow.png') %>) right 10px no-repeat scroll;
+  background: transparent url('bg/bg-arrow.png') right 10px no-repeat scroll;
 }
 .content-container .content-body .content-list .content-list-item span.list-item-icon {
   width: 55px;
@@ -760,7 +760,7 @@ div#init-container li.maria-link span.init-icon {
   margin: 0 0 0 9%;
   padding: 0;
   float: left;
-  background: transparent url(<%= asset_path('sprite-map/sprite-list-icons.png') %>) left top no-repeat scroll;	
+  background: transparent url('sprite-map/sprite-list-icons.png') left top no-repeat scroll;
 }
 .content-container .content-body .content-list .content-list-item span.prayer-icon {
   background-position: -10px -10px;
