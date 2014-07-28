@@ -1,3 +1,12 @@
-<h1><%= t('our_father') %></h1>
-
-<%= render "prayers/our_father/#{partial_locale}" %>
+<div id="father-container" class="content-container">
+	
+	<div id="father-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= t('our_father') %></h2>
+	</div>
+	
+	<div id="father-body" class="content-body">
+		<%= render "prayers/our_father/#{partial_locale}" %>
+	</div>
+	
+</div>

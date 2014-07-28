@@ -1,0 +1,22 @@
+<%
+	current_uri = request.env['PATH_INFO']
+	if current_uri.index("edit") == nil %>
+		
+		<div id="efforts-bottom" class="content-bottom-action-bar action-bar-standalone">
+			<% if current_uri.index("new") != nil %>
+				<%= link_to t('helpers.links.back'), point_of_efforts_path %>
+			<% else %>
+				<%= link_to t('helpers.links.new', model: PointOfEffort.model_name.human), new_point_of_effort_path %>
+			<% end %>
+		</div>
+		
+	<% else %>
+		
+		<div id="efforts-bottom" class="content-bottom-action-bar">
+			<ul>
+				<li><%= link_to t('helpers.links.show'), point_of_effort_path(@point_of_effort, locale: locale) %></li>
+				<li><%= link_to t('helpers.links.back'), point_of_efforts_path(locale: locale) %></li>
+			</ul>
+		</div>
+		
+	<% end %>

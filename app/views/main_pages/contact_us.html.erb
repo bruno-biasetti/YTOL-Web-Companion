@@ -1,3 +1,14 @@
-<h1><%= t('contact_us') %></h1>
-
-<%= render "main_pages/contact_us/#{partial_locale}" %>
+<div id="contact-container" class="content-container">
+	
+	<div id="contact-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= t('contact_us') %></h2>
+	</div>
+	
+	<div id="contact-body" class="content-body">
+		
+		<%= render "main_pages/contact_us/#{partial_locale}" %>
+		
+	</div>
+	
+</div>

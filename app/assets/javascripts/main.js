@@ -107,10 +107,58 @@ $(document).on('ready page:load', function() {
 			};
 		},
 		
+		setupActionList : function(){
+			var hasActionList = $('.list-item-actions').length;
+			if ( hasActionList > 0 ){
+				$('.list-item-actions').hide();
+				
+				$('.circle-icon').click(function() {
+					if ( $(this).hasClass('circle-uncheck') ){
+						$(this).removeClass('circle-uncheck');
+						$(this).addClass('circle-check');
+						
+						$(this).parent('li').find('.list-item-actions').slideDown('fast');
+						
+					}else{
+						$(this).removeClass('circle-check');
+						$(this).addClass('circle-uncheck');
+						
+						$(this).parent('li').find('.list-item-actions').slideUp('fast');
+						
+					};
+				});
+			};
+		},
+		
+		setupMariaVideo : function(){
+			var hasVideo = $('#video-container').length;
+			if ( hasVideo > 0 ){
+				$('#video-container').text("");
+				$('#video-container').html('<iframe width="100%" height="auto" src="//www.youtube-nocookie.com/embed/z4yGHPRbjow?rel=0" frameborder="0" allowfullscreen></iframe>');
+			};
+		},
+		
+		setupLoadClick : function(){
+			$('#load-click').hide();
+			
+			$('#nav-drawer a').click(function() {
+				if ( !$(this).hasClass('arrow-ctrl') ){
+					$('#load-click').show();
+				};
+			});
+			
+			$('#container-wrapper a').click(function() {
+				$('#load-click').show();
+			});
+		},
+		
 		init : function(){
 			this.setupBodyHeight();
 			this.initNavDrawer();
 			this.setupNotifications();
+			this.setupActionList();
+			this.setupMariaVideo();
+			this.setupLoadClick();
 		}
 		
 	};

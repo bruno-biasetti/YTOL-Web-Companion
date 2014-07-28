@@ -30,6 +30,8 @@
 
 <%= render 'layouts/action_bar' %>
 
+<%= render 'layouts/load_click' %>
+
 <div id="nav-drawer">
     <ul id="nav-drawer-container">
         <% if !user_signed_in? %>
@@ -54,9 +56,9 @@
                         <li><%= link_to t('the_rosary'), the_rosary_path %></li>
                     </ul>
                 </li>
-                <li><%= t('theme_reflections') %></li>
-                <li><%= t('sharing') %></li>
-                <li><%= t('point_of_effort') %></li>
+                <li><%= link_to t('theme_reflections'), theme_reflections_path %></li>
+                <li><%= link_to t('sharing'), sharings_path %></li>
+                <li><%= link_to t('point_of_effort'), point_of_efforts_path %></li>
             </ul>
         </li>
         <li><%= link_to t('contact_us'), contact_us_path %></li>

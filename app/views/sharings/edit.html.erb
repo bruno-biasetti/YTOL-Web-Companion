@@ -1,6 +1,16 @@
-<h1><%= Sharing.model_name.human %></h1>
-
-<%= render 'form', custom_url: sharing_path(@sharing, locale: locale) %>
-
-<%= link_to t('helpers.links.show'), sharing_path(@sharing, locale: locale) %> |
-<%= link_to t('helpers.links.back'), sharings_path(locale: locale) %>
+<div id="sharings-edit-container" class="content-container">
+	
+	<div id="sharings-edit-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= Sharing.model_name.human %></h2>
+	</div>
+	
+	<div id="sharings-edit-body" class="content-body">
+		
+		<%= render 'form', custom_url: sharing_path(@sharing, locale: locale) %>
+		
+	</div>
+	
+	<%= render "sharings/bottom_action_bar" %>
+	
+</div>

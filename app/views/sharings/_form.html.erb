@@ -1,7 +1,7 @@
 <%= simple_form_for(@sharing, url: custom_url) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs multi-question">
     <%= f.input :spiritual_life %>
     <%= f.input :god_relationship %>
     <%= f.input :family_relationship %>
@@ -9,6 +9,6 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class => "action-submit"  %>
   </div>
 <% end %>

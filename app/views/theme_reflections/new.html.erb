@@ -1,5 +1,16 @@
-<h1><%= ThemeReflection.model_name.human %></h1>
-
-<%= render 'form', custom_url: theme_reflections_path(locale: locale) %>
-
-<%= link_to t('helpers.links.back'), theme_reflections_path %>
+<div id="reflections-new-container" class="content-container">
+	
+	<div id="reflections-new-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= ThemeReflection.model_name.human %></h2>
+	</div>
+	
+	<div id="reflections-new-body" class="content-body">
+		
+		<%= render 'form', custom_url: theme_reflections_path(locale: locale) %>
+		
+	</div>
+	
+	<%= render "theme_reflections/bottom_action_bar" %>
+	
+</div>

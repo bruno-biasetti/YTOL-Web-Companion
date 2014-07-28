@@ -1,7 +1,29 @@
-<h1><%= t('meeting_guide') %></h1>
-<ul>
-    <li><%= link_to t('prayers'), prayers_path %></li>
-    <li><%= t('theme_reflections') %></li>
-    <li><%= t('sharing') %></li>
-    <li><%= t('point_of_effort') %></li>
-</ul>
+<div id="guide-container" class="content-container">
+	
+	<div id="guide-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= t('meeting_guide') %></h2>
+	</div>
+	
+	<div id="guide-body" class="content-body">
+		<ul class="content-list">
+		    <li class="content-list-item">
+				<span class="list-item-icon prayer-icon"></span>
+				<%= link_to t('prayers'), prayers_path %>
+			</li>
+		    <li class="content-list-item">
+				<span class="list-item-icon reflection-icon"></span>
+				<%= link_to t('theme_reflections'), theme_reflections_path %>
+			</li>
+		    <li class="content-list-item">
+				<span class="list-item-icon sharing-icon"></span>
+				<%= link_to t('sharing'), sharings_path %>
+			</li>
+		    <li class="content-list-item">
+				<span class="list-item-icon effort-icon"></span>
+				<%= link_to t('point_of_effort'), point_of_efforts_path %>
+			</li>
+		</ul>
+	</div>
+	
+</div>

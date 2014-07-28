@@ -1,5 +1,16 @@
-<h1><%= PointOfEffort.model_name.human %></h1>
-
-<%= render 'form', custom_url: point_of_efforts_path(locale: locale) %>
-
-<%= link_to t('helpers.links.back'), point_of_efforts_path %>
+<div id="efforts-new-container" class="content-container">
+	
+	<div id="efforts-new-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= PointOfEffort.model_name.human %></h2>
+	</div>
+	
+	<div id="efforts-new-body" class="content-body">
+		
+		<%= render 'form', custom_url: point_of_efforts_path(locale: locale) %>
+		
+	</div>
+	
+	<%= render "point_of_efforts/bottom_action_bar" %>
+	
+</div>

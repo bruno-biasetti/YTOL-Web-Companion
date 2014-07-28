@@ -1,9 +1,37 @@
-<%= t('prayers') %>
-<ul>
-    <li><%= link_to t('magnificat'), magnificat_path %></li>
-    <li><%= link_to t('holy_spirit'), holy_spirit_path %></li>
-    <li><%= link_to t('hail_mary'), hail_mary_path %></li>
-    <li><%= link_to t('our_father'), our_father_path %></li>
-    <li><%= link_to t('time_out'), time_out_path %></li>
-    <li><%= link_to t('the_rosary'), the_rosary_path %></li>
-</ul>
+<div id="prayers-container" class="content-container">
+	
+	<div id="prayers-header" class="content-header">
+		<span class="content-header-icon"></span>
+		<h2><%= t('prayers') %></h2>
+	</div>
+	
+	<div id="prayers-body" class="content-body">
+		<ul class="content-list">
+		    <li class="content-list-item">
+				<span class="list-item-icon mary-icon"></span>
+				<%= link_to t('magnificat'), magnificat_path %>
+			</li>
+		    <li class="content-list-item">
+				<span class="list-item-icon spirit-icon"></span>
+				<%= link_to t('holy_spirit'), holy_spirit_path %>
+			</li>
+		    <li class="content-list-item">
+				<span class="list-item-icon mary-icon"></span>
+				<%= link_to t('hail_mary'), hail_mary_path %>
+			</li>
+		    <li class="content-list-item">
+				<span class="list-item-icon cross-icon"></span>
+				<%= link_to t('our_father'), our_father_path %>
+			</li>
+			<li class="content-list-item">
+				<span class="list-item-icon time-icon"></span>
+				<%= link_to t('time_out'), time_out_path %>
+			</li>
+			<li class="content-list-item">
+				<span class="list-item-icon rosary-icon"></span>
+				<%= link_to t('the_rosary'), the_rosary_path %>
+			</li>
+		</ul>
+	</div>
+	
+</div>
