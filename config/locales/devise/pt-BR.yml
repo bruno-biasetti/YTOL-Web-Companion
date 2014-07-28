@@ -68,12 +68,14 @@ pt-BR:
         back: Voltar
       new:
         title: Inscrever-se
+        sign_in: Login
         submit: Inscrever-se
     sessions:
       signed_in: 'Login realizado com sucesso.'
       signed_out: 'Logout realizado com sucesso.'
       new:
         title: Login
+        sign_up: Inscrever-se
         submit: Login
     shared:
       links:

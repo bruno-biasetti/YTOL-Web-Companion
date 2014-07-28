@@ -68,12 +68,14 @@ en:
         back: Back
       new:
         title: Sign up
+        sign_in: Sign in
         submit: Sign up
     sessions:
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
       new:
         title: Sign in
+        sign_up: Sign up
         submit: Sign in
     shared:
       links:
