@@ -43,6 +43,7 @@ Rails.application.routes.draw do
     get 'oh_maria' => 'main_pages#oh_maria'
     
     get 'oh_maria_video' => 'main_pages#oh_maria_video'
+    get 'oh_maria_music' => 'main_pages#oh_maria_music'
 
   end
 
