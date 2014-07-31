@@ -144,13 +144,11 @@ $(document).on('ready page:load', function() {
 			$('#nav-drawer a').click(function() {
 				if ( !$(this).hasClass('arrow-ctrl') ){
 					$('#load-click').show();
-					$('#load-click').delay(3000).fadeOut('slow');
 				};
 			});
 			
 			$('#container-wrapper a').click(function() {
 				$('#load-click').show();
-				$('#load-click').delay(3000).fadeOut('slow');
 			});
 		},
 		
@@ -165,6 +163,10 @@ $(document).on('ready page:load', function() {
 		
 	};
 	
-	ytolAppMain.init();
+	ytolAppMain.init();	
+	
+	document.addEventListener("page:restore", function() {
+		ytolAppMain.setupLoadClick();
+	});
 	
 });
